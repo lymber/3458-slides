@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="disc_info">
+  
+  <title>Informações do Curso</title>    
+
+  <slide>
+    <title>O que é Álgebra Linear</title>
+    <ol pause="yes">
+      <li>É uma linguagem poderosa, que permite abordar de maneira geral e
+      simultânea certos conjuntos que possuem uma estrutura algébrica em
+      comum.</li>
+      <li>A partir desta abordagem podemos obter resultados gerais que
+      podem ser interpretados em cada contexto e trazer à luz
+      propriedades ou interpretações dessas propriedades em cada caso
+      específico.</li>
+      <li>Apesar de parecer algo abstrato e complexo, as técnicas
+      utilizadas são sempre muito simples e, não raramente, podem ser
+      implementadas em algoritmos.</li>
+      <li>Além de uma ferramente teórica muito poderosa, ela permite
+      olhar para problemas concretos de uma maneira objetiva, sendo
+      naturalmente aplicada para resolver problemas
+      (computacionalmente).</li>
+      <li>Se o tempo e o interesse de vocês permitir, tentaremos trazer
+      algumas dessas aplicações e, eventualmente, implementações em
+      softwares específicos!</li>
+    </ol>
+  </slide>
+  
+  <slide>
+    <title>Ementa</title>
+    
+    <p><dl>
+      <li>
+	<title>Espaços vetoriais sobre <m>\R</m>:</title>
+	<p>definição e propriedades; subespaços vetoriais; dependência
+	linear; base e dimensão; soma de subespaços.</p>
+      </li>
+      <li>
+	<title>Transformações lineares:</title>
+	<p>núcleo e imagem; matriz de uma transformação linear.</p>
+      </li>
+      <li>
+	<title>Espaços vetoriais com produto interno:</title>
+	<p>ortogonalidade; bases ortonormais; projeção ortogonal.</p>
+      </li>
+      <li>
+	<title>Autovalores e autovetores:</title>
+	<p>diagonalização de operadores lineares</p>
+      </li>
+      <li>
+	<title>Operadores lineares simétricos</title>
+      </li>
+      <li>
+	<title>Espaços Vetoriais sobre <m>\C</m>.</title>
+      </li>
+      <li>
+	<title>Muitas Aplicações!</title>
+      </li>
+    </dl></p>
+  </slide>
+
+  <slide>
+    <title>Avaliação e Critérios de Aprovação:</title>
+    
+    <p>Vide página específica no e-disciplinas.</p>
+  </slide>
+</section>

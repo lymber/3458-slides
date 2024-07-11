@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="esp_vet">
+  <title>Espaços Vetoriais</title>
+
+  <slide>
+    <title>Motivação</title>    
+    <p>Começamos com dois exemplos básicos e já conhecidos:</p>
+
+    <p>
+    <dl pause="yes">
+      <li>
+	<title>O conjunto dos vetores <m>V^3</m></title>
+	<p>Aqui temos duas operações:
+	<ul pause="yes">
+	  <li>a soma vetores, <m>\vec{u}+\vec{v}</m>, que é comutativa,
+	  associativa, com elemento neutro e cada vetor tem seu
+	  oposto;</li>
+	  <li>a multiplicação de vetor por escalar (um número real),
+	  <m>\alpha\vec{u}</m>, satisfazendo
+	  <me>(\alpha\beta)\vec{u}=\alpha(\beta\vec{u});\quad
+	  (\alpha+\beta)\vec{u}=\alpha\vec{u}+\beta\vec{u};\quad
+	  \alpha(\vec{u}+\vec{v})=\alpha\vec{u}+\alpha\vec{v};\quad
+	  1\vec{u}=\vec{u}.</me></li>
+	</ul></p>
+      </li>
+      <li>
+	<title>O conjunto das matrizes <m>m\times n</m> com entradas
+	reais, <m>M_{m\times n}(\R)</m></title> <p> Com <m>m</m> e
+	<m>n</m>, naturais positivos fixados, temos a operação de soma
+	de matrizes e a multiplicação por escalar. Cada uma delas
+	satisfaz as mesmas propriedades do exemplo anterior.</p></li>
+      <li><p>Vamos estudar, de maneira unificada, todos os conjuntos que
+      estejam munidos de duas operações satisfazendo as propriedades
+      acima.</p></li>
+    </dl></p>
+  </slide>
+
+  <slide>
+    <title>Espaço Vetorial</title>
+
+    <p>Generalizando o que vimos no slide anterior temos a:</p>
+    
+    <definition xml:id="def-esp_vet">
+      <idx>Espaço Vetorial</idx><idx><h>espaço</h><h>espaço vetorial</h></idx>
+      <notation>
+        <usage><m>(V,+,\cdot)</m></usage>
+        <description>Espaço vetorial <m>V</m> com a asoma <m>+</m> e o
+        produto por escalar <m>\cdot</m>.</description>
+      </notation>
+      <statement>
+        <p>Um conjunto <m>V\neq\emptyset</m> é um <term>espaço vetorial
+	sobre <m>\R</m></term> se estão definidas:
+	<subslide>
+	  <p>uma adição, <m>(u,v)\mapsto u+v</m>, satisfazendo
+	  <ol marker="a.">
+	    <li><m>u+v=v+u</m>;</li>
+	    <li><m>u+(v+w)=(u+v)+w</m>;</li>
+	    <li><m>\exists 0\in V</m> tal que <m>0+u=u;</m></li>
+	    <li><m>\forall u\in V,\exists -u\in V</m>, tal que
+	    <m>u+(-u)=0</m>.</li>
+	  </ol></p>	    
+	</subslide>
+	<subslide>
+	  <p>uma multiplicação por escalar, <m>(\alpha,u)\mapsto
+	  \alpha u</m>, satisfazendo
+	  <ol marker="a.">
+	    <li><m>(\alpha\beta)\vec{u}=\alpha(\beta\vec{u});</m></li>
+	    <li><m>(\alpha+\beta)\vec{u}=\alpha\vec{u}+\beta\vec{u};</m></li>
+	    <li><m>\alpha(\vec{u}+\vec{v})=\alpha\vec{u}+\alpha\vec{v};</m></li>
+	    <li><m>1\vec{u}=\vec{u}</m>.</li>
+	  </ol></p>
+	</subslide>
+	</p>
+      </statement>
+    </definition>
+  </slide>
+
+</section>
