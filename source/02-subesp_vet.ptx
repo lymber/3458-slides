@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="subesp_vet">
+  <title>Subespaços Vetoriais</title>
+
+  <slide>
+    <title>Motivação e Definição</title>    
+
+    <dl pause="yes">
+      <li><p>Em geral, para conhecer algum objeto, é bom começar estudando
+      "partes" dele.</p></li>
+      <li><p>Melhor ainda se estas partes (ou subconjuntos) satisfizerem as
+      mesmas propriedades que o objeto. Daí vem a:</p></li>
+      <li><p>
+	<definition xml:id="def-subesp_vet">
+	  <idx>Subespaço Vetorial</idx><idx><h>subespaço</h><h>subespaço
+	  vetorial</h></idx>
+	  <notation>
+            <usage><m>U\leq V</m></usage>
+            <description>Subespaço vetorial <m>U</m> do espaço vetorial
+            <m>V</m>.</description>
+	  </notation>
+	  <statement>
+            <p>Seja <m>(V,+,\cdot)</m> um espaço vetorial. Um
+            subconjunto não-vazio <m>U\subseteq V</m> é um
+            <term>subespaço vetorial de <m>V</m></term> se,
+            restringindo-se as operações de <m>V</m> a <m>U</m>, então
+            <m>U</m> é um espaço vetorial. Nesse caso escrevemos
+	    <m>U\leq V</m>.</p>
+	  </statement>
+      </definition></p></li>
+      <li><p><proposition xml:id="prop-subesp_vet">
+	<statement>
+	  <p>Seja <m>(V,+,\cdot)</m> um espaço vetorial. Um subconjunto
+	  não-vazio
+	  <m>U\subseteq V</m> é subespaço vetorial de <m>V</m> se, e
+	  somente se, valem simultaneamente
+	  <ol marker="i." cols="3">
+	    <li><m>\nv\in U</m>;</li>
+	    <li><m>u_1,u_2\in U\implies u_1+u_2\in U</m>;</li>
+	    <li><m>\alpha\in\R,u\in U\implies \alpha u\in U</m>.</li>
+	  </ol>
+	  </p>
+	</statement>
+	<!-- <proof> -->
+	<!--   Vamos para a lousa! -->
+	<!-- </proof> -->
+      </proposition></p></li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Exemplos?</title>
+
+    <dl pause="yes">
+      <li><title>Subespaços triviais:</title>
+      <p><m>\{\nv\}</m> e <m>V</m> são subespaços de <m>V</m>, chamados
+      de <term>subespaços triviais</term>. Qualquer outro subespaço de
+      <m>M</m> é chamado de <term>subespaço próprio</term>.</p></li>
+      <li><title> Planos em <m>\R^3</m> passando pela origem</title>
+      <p><m>V=\R^3</m> e, por exemplo, <m>U=\big\{(x,y,z)\in\R^3\colon
+      x-2y+z=0\big\}</m>.</p>
+      </li>
+      <li><title>Subconjuntos de <m>C(\R)</m></title>
+      <p><m>V=C(\R)</m> e <m>U=\big\{f\in C(\R)\colon
+      f(0)=f(1)\big\}</m>.</p>
+      <p><m>V=C(\R)</m> e <m>U=\big\{f\in C(\R)\colon
+      f(0)=2\big\}</m>.</p>
+      <p><m>V=C(\R)</m> e <m>U=\big\{f\in C(\R)\colon
+      f\text{ é derivável}\big\}</m>.</p>
+      </li>
+      <li><title>Interseção de subespaços</title>
+      <p>Se <m>U\leq V</m> e <m>W\leq V</m>, então <m>U\cap W\leq
+      V</m>.</p>
+      </li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Exemplos?</title>
+
+    <dl pause="yes">
+      <li><title>União de subespaços</title>
+      <p>Se <m>U\leq V</m> e <m>W\leq V</m>, então <m>U\cup W</m>
+      <term>nem sempre</term> é subespaço de <m>V</m>.</p> 
+      </li>
+      <li><title>Subconjunto do espaço das matrizes:</title>
+      <p>Fixe <m>n\in\N,n\geq 1</m> e <m>V=M_n(\R)</m></p>
+      <p><m>U=\big\{A\in V\colon A \text{ é simétrica}\big\}</m>;</p>
+      <p><m>U=\big\{A\in V\colon \det(A)=0\big\}</m>;</p>
+      <p><m>U=\big\{A\in V\colon \tr(A)=0\big\}</m>;</p>
+      </li>
+      <li><title>Soluções de sistemas lineares</title>
+      <p>Fixe <m>m,n\in\N,m,n\geq 1</m>, <m>A\in M_{m\times n}(\R)</m> e
+      <m>=b\in M_{m\times 1}(\R)</m>.</p>
+      <p><m>U=\big\{x\in M_{n\times 1}(\R): Ax=\nv\big\}</m>;</p>
+      <p><m>U=\big\{x\in M_{n\times 1}(\R): Ax=b\big\}</m>;</p>
+      </li>
+    </dl>
+  </slide>
+
+  
+</section>
