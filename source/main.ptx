@@ -19,8 +19,11 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
   <docinfo>
     <macros>
       \newcommand{\definiteintegral}[4]{\int_{#1}^{#2}\,#3\,d#4}
+      \newcommand{\N}{\mathbb{N}}
       \newcommand{\R}{\mathbb{R}}
       \newcommand{\C}{\mathbb{C}}
+      \newcommand{\nv}{\mathbf{0}}
+      \DeclareMathOperator{\tr}{tr}
     </macros>
   </docinfo>
 
@@ -51,6 +54,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
     </frontmatter>
     <xi:include href="./00-disc_info.ptx" />
     <xi:include href="./01-esp_vet.ptx" />
+    <xi:include href="./02-subesp_vet.ptx" />
     <xi:include href="./99-sample_stuff.ptx" />
 
   </slideshow>

@@ -52,28 +52,138 @@
         <p>Um conjunto <m>V\neq\emptyset</m> é um <term>espaço vetorial
 	sobre <m>\R</m></term> se estão definidas:
 	<subslide>
-	  <p>uma adição, <m>(u,v)\mapsto u+v</m>, satisfazendo
-	  <ol marker="a.">
-	    <li><m>u+v=v+u</m>;</li>
-	    <li><m>u+(v+w)=(u+v)+w</m>;</li>
-	    <li><m>\exists 0\in V</m> tal que <m>0+u=u;</m></li>
-	    <li><m>\forall u\in V,\exists -u\in V</m>, tal que
-	    <m>u+(-u)=0</m>.</li>
-	  </ol></p>	    
+	  <ul>
+	    <li><p>uma <term>adição</term>, <m>(u,v)\mapsto u+v</m>, satisfazendo
+	    <ol marker="a.">
+	      <li><m>u+v=v+u</m>, para todos <m>u,v\in V</m>;</li>
+	      <li><m>u+(v+w)=(u+v)+w</m>, para todos <m>u,v,w\in
+	      V</m>;</li>
+	      <li>existe <m>\nv\in V</m> tal que <m>\nv+u=u</m>, para
+	      todo <m>u\in V</m>;</li>
+	      <li>para todo <m>u\in V</m>, existe <m>-u\in V</m>, tal que
+	      <m>u+(-u)=\nv</m>.</li>
+	    </ol></p></li>
+	  </ul>
 	</subslide>
 	<subslide>
-	  <p>uma multiplicação por escalar, <m>(\alpha,u)\mapsto
-	  \alpha u</m>, satisfazendo
-	  <ol marker="a.">
-	    <li><m>(\alpha\beta)\vec{u}=\alpha(\beta\vec{u});</m></li>
-	    <li><m>(\alpha+\beta)\vec{u}=\alpha\vec{u}+\beta\vec{u};</m></li>
-	    <li><m>\alpha(\vec{u}+\vec{v})=\alpha\vec{u}+\alpha\vec{v};</m></li>
-	    <li><m>1\vec{u}=\vec{u}</m>.</li>
-	  </ol></p>
+	  <ul>
+	    <li><p>uma <term>multiplicação por escalar</term>,
+	    <m>(\alpha,u)\mapsto \alpha u</m>, satisfazendo
+	    <ol marker="a.">
+	      <li><m>(\alpha\beta)\vec{u}=\alpha(\beta\vec{u})</m>, para
+	      todos <m>\alpha,\beta\in\R</m> e todo <m>u\in V</m>;</li>
+	      <li><m>(\alpha+\beta)\vec{u}=\alpha\vec{u}+\beta\vec{u}</m>,
+	      para todos <m>\alpha,\beta\in\R</m> e todo <m>u\in
+	      V</m>;</li>
+	      <li><m>\alpha(\vec{u}+\vec{v})=\alpha\vec{u}+\alpha\vec{v}</m>, para
+	      todo <m>\alpha\in\R</m> e todos <m>u,v\in V</m>;</li>
+	      <li><m>1\vec{u}=\vec{u}</m>, para todo <m>u\in V</m>.</li>
+	    </ol></p></li>
+	  </ul>
 	</subslide>
 	</p>
       </statement>
     </definition>
   </slide>
 
+  <slide>
+    <title>Exemplos?</title>
+
+    <dl pause="yes">
+      <li><title>O conjunto <m>\R</m>,</title>
+      <p>munido das operações usuais de soma
+      e muliplicação.</p>
+      </li>
+      <li><title>O conjunto <m>\C</m>,</title>
+      <p>munido das operações usuais de soma de complexos e de
+      muliplicação (<em>por número real</em>).</p>
+      </li>
+      <li><title>O conjunto <m>V^3</m>,</title>
+      <p>munido da soma de vetores e da multiplicação de escalar por
+      vetor.</p>
+      </li>
+      <li><title>O conjunto <m>M_{m\times n}(\R)</m>,</title>
+      <p>munido da soma usual de matrizes e da multiplicação usual de
+      matriz por um número real.</p>
+      </li>
+      <li><title>Os conjuntos <m>\R^n=\big\{(x_1,\ldots,x_n)\colon
+      x_i\in\R\big\}</m> e <m>\C^n=\big\{(x_1,\ldots,x_n)\colon
+      x_i\in\C\big\}</m>,</title>
+      <p>sendo <m>\alpha\in\R</m>, consideramos as operações
+      <md>
+	<mrow>(x_1,\ldots,x_n)+(y_1,\ldots,y_n)&amp;=(x_1+y_1,\ldots,x_n+y_n);</mrow>
+	<mrow>\alpha(x_1,\ldots,x_n)&amp;=(\alpha x_1,\ldots,\alpha
+	x_n).</mrow>
+	</md></p>
+      </li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Exemplos?</title>
+
+    <dl pause="yes">
+      <li><title>O conjunto <m>P_n(\R)</m>, dos polinômios com
+      coeficientes reais e de grau no máximo <m>n</m>,</title>
+      <p>munido das operações usuais de soma de polinômios e
+      muliplicação de um polinômio por um número real.</p></li>
+      <li>
+      <p>Poderíamos considerar também polinômios com coeficientes
+      complexos.</p>
+      </li>
+      <li><title>O conjunto <m>C(I)</m>, de todas as funções contínuas
+      do intervalo <m>I</m> em <m>\R</m>,</title>
+      <p>com as operações usuais de soma de funções e muliplicação de
+      função por um número real):
+      <me>(f+g)(x)=f(x)+g(x);\qquad (\alpha f)(x)=\alpha f(x).</me></p>
+      </li>
+      <li><title>O conjunto <m>\R_+=\big\{u\in\R\colon u&gt;0\big\}</m>,</title>
+      <p>munido das operações
+      <m>u\oplus v=uv</m> e <m>\alpha\odot u=u^{\alpha}</m>.
+      </p>
+      </li>
+      <li><title>O conjunto <m>\R^2</m>,</title>
+      <p>com as operações <m>(x_1,y_1)\oplus(x_2,y_2)=(x_1+x_2,0)</m> e
+      <m>\alpha(x,y)=(\alpha x, \alpha y)</m>.</p>
+      </li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Propriedades Elementares</title>
+
+    <dl pause="yes">
+      <li><p>Tipicamente denotamos um espaço vetorial indicando o
+      conjunto e suas operações de soma e multiplicação por escalar:
+      <m>(V,+,\cdot)</m>.  Quando não houver confusão com relação a
+      estas operações escreveremos simplesmente <m>V</m>.</p></li>
+    
+    <li><proposition xml:id="prop-prop_esp_vet">
+      <statement>
+	<p>Seja <m>(V,+,\cdot)</m> um espaço vetorial. Então:
+	<ol marker="i." cols="2" pause="yes">
+	  <li><m>u+v=u+w\implies v=w</m>;</li>
+	  <li>o elemento neutro da soma em <m>V</m> é único;</li>
+	  <li>o oposto de cada <m>u\in V</m> é único;</li>
+	  <li><m>\alpha\nv=\nv</m>;</li>
+	  <li><m>0u=\nv</m>;</li>
+	  <li><m>\alpha u=\nv\implies\alpha=0</m> ou <m>u=\nv</m>;</li>
+	  <li><m>(-\alpha)u=\alpha(-u)=-(\alpha u)</m>.</li>
+	</ol>
+	</p>
+      </statement>
+      <!-- <proof> -->
+      <!-- 	Vamos para a lousa! -->
+      <!-- </proof> -->
+    </proposition></li>
+
+    <li><p><term>Observação:</term> Poderíamos definir o que seria um
+    <term>espaço vetorial sobre <m>\C</m></term>, usando escalares
+    complexos ao inves de reais. Mais geralmente podemos ter um espaço
+    vetorial sobre um <em>corpo</em> <m>K</m> qualquer (um pouco fora do
+    escopo deste curso).</p></li>
+    </dl>
+  </slide>
+
+  
 </section>
