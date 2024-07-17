@@ -4,7 +4,7 @@
   <title>Espaços Vetoriais</title>
 
   <slide>
-    <title>Motivação</title>    
+    <title>Espaços Vetoriais - Motivação</title>    
     <p>Começamos com dois exemplos básicos e já conhecidos:</p>
 
     <p>
@@ -37,9 +37,9 @@
   </slide>
 
   <slide>
-    <title>Espaço Vetorial</title>
+    <title>Espaços Vetoriais - Definição</title>
 
-    <p>Generalizando o que vimos no slide anterior temos a:</p>
+    <p>Generalizando o que vimos na lâmina anterior temos a:</p>
     
     <definition xml:id="def-esp_vet">
       <idx>Espaço Vetorial</idx><idx><h>espaço</h><h>espaço vetorial</h></idx>
@@ -87,16 +87,16 @@
   </slide>
 
   <slide>
-    <title>Exemplos?</title>
+    <title>Espaços Vetoriais - Exemplos e Contraexemplos</title>
 
     <dl pause="yes">
       <li><title>O conjunto <m>\R</m>,</title>
       <p>munido das operações usuais de soma
-      e muliplicação.</p>
+      e multiplicação.</p>
       </li>
       <li><title>O conjunto <m>\C</m>,</title>
       <p>munido das operações usuais de soma de complexos e de
-      muliplicação (<em>por número real</em>).</p>
+      multiplicação (<em>por número real</em>).</p>
       </li>
       <li><title>O conjunto <m>V^3</m>,</title>
       <p>munido da soma de vetores e da multiplicação de escalar por
@@ -120,13 +120,13 @@
   </slide>
 
   <slide>
-    <title>Exemplos?</title>
+    <title>Espaços Vetoriais - Exemplos e Contraexemplos</title>
 
     <dl pause="yes">
       <li><title>O conjunto <m>P_n(\R)</m>, dos polinômios com
       coeficientes reais e de grau no máximo <m>n</m>,</title>
       <p>munido das operações usuais de soma de polinômios e
-      muliplicação de um polinômio por um número real.</p></li>
+      multiplicação de um polinômio por um número real.</p></li>
       <li>
       <p>Poderíamos considerar também polinômios com coeficientes
       complexos.</p>
@@ -134,7 +134,7 @@
       <li><title>O conjunto <m>C(I)</m>, de todas as funções contínuas
       do intervalo <m>I</m> em <m>\R</m>,</title>
       <p>com as operações usuais de soma de funções e muliplicação de
-      função por um número real):
+      função por um número real:
       <me>(f+g)(x)=f(x)+g(x);\qquad (\alpha f)(x)=\alpha f(x).</me></p>
       </li>
       <li><title>O conjunto <m>\R_+=\big\{u\in\R\colon u&gt;0\big\}</m>,</title>
@@ -150,7 +150,7 @@
   </slide>
 
   <slide>
-    <title>Propriedades Elementares</title>
+    <title>Espaços Vetoriais - Propriedades Elementares</title>
 
     <dl pause="yes">
       <li><p>Tipicamente denotamos um espaço vetorial indicando o
@@ -179,7 +179,7 @@
 
     <li><p><term>Observação:</term> Poderíamos definir o que seria um
     <term>espaço vetorial sobre <m>\C</m></term>, usando escalares
-    complexos ao inves de reais. Mais geralmente podemos ter um espaço
+    complexos ao invés de reais. Mais geralmente, podemos ter um espaço
     vetorial sobre um <em>corpo</em> <m>K</m> qualquer (um pouco fora do
     escopo deste curso).</p></li>
     </dl>
