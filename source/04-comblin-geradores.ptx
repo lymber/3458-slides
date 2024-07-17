@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="subespgerado-comblin">
+  <title>Combinações Lineares e Subespaços Gerados</title>
+
+  <slide>
+    <title>Combinações Lineares e Subespaços Gerados - Motivação e
+    Definição</title>
+
+    <dl pause="yes">
+      <li><p>Usando a estrutura fornecida pelas operações podemos
+      "criar" ou descrever subespaços vetoriais a partir de um conjunto
+      arbitrário de elementos de um espaço vetorial.</p></li>
+      <li><p>
+	<definition xml:id="def-subespgerado-comblin">
+	  <idx>Subespaço Gerado</idx><idx><h>Combinação Linear</h></idx>
+	  <notation>
+            <usage><m>[S]</m></usage>
+            <description>Subespaço gerado por um conjunto
+            <m>S</m>.</description>
+	  </notation>
+	  <statement>
+            <p>Sejam <m>V</m> um espaço vetorial e
+	    <m>S=\{u_1,\ldots,u_n\}\subset V</m>. O
+	    <term>conjunto gerado por <m>S</m></term> é o
+	    conjunto <me>[S]=\big\{\alpha_1u_1+\ldots+\alpha_n u_n\colon
+	    \alpha_1,\ldots,\alpha_n\in\R\big\}.</me></p>
+	    <p>Um elemento de <m>[S]</m> é uma <term>combinação
+	    linear</term> dos elementos de <m>[S]</m>.</p>
+	  </statement>
+      </definition></p></li>
+      <li><p>Usualmente indicamos também <m>[S]</m> por
+      <m>[u_1,\ldots,u_n]</m>.</p></li>
+      <li><p>Dizemos que <m>u_1,\ldots,u_n</m> <term>geram</term>
+      <m>[S]</m> ou que são um <term>sistema de geradores</term> de
+      <m>[S]</m>.</p></li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Combinações Lineares e Subespaços Gerados - Propriedades e
+    Observações</title>
+
+    <dl pause="yes">
+      <li><p><proposition xml:id="prop-subesp_gerado">
+	<statement>
+	  <p>O conjunto <m>[S]</m> definido na lâmina anterior é um
+	  subespaço vetorial de <m>V</m>.</p>
+	</statement>
+	<!-- <proof> -->
+	<!--   Vamos para a lousa! -->
+	<!-- </proof> -->
+      </proposition></p></li>
+      <li><title>Convenções e Momenclaturas</title>
+      <p><m>[\emptyset]=\{\nv\}.</m></p>
+      <p pause="yes">Se <m>S</m> é infinito, <m>[S]</m> é definido com o
+      conjunto de todas as combinações lineares utilizando um número
+      finito de vetores de <m>S</m>.</p>
+      <p pause="yes">Um espaço vetorial <m>V</m> é <term>finitamente
+      gerado</term> se existe um conjunto <term>finito</term>
+      <m>S\subset V</m> tal que <m>V=[S]</m>.</p>
+      </li>
+      <li><title>Propriedades</title>
+      <p><ol marker="i" cols="4">
+	<li><m>S\subseteq [S]</m>;</li>
+	<li><m>S_1\subseteq S_2\subseteq V\implies [S_1]\subseteq
+	[S_2]</m>;</li>
+	<li><m>[S]=\big[[S]\big]</m>;</li>
+	<li><m>[S_1\cup S_2]=[S_1]+[S_2]</m>.</li>
+      </ol></p>
+      <p pause="yes"><m>[S]</m> é o menor subespaço vetorial de <m>V</m>
+      que contém o conjunto <m>S</m>.</p>
+      </li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Combinações Lineares e Subespaços Gerados - Exemplos</title>
+    <ol marker="1." pause="yes">
+      <li><p>Determine um sistema de geradores para o seguinte subespaço
+      de <m>\R^4</m>: <me>U=\big\{(x,y,z,t)\in\R^4\colon x-y-z+t=0
+      \text{ e } x+y+z=0\big\}.</me></p></li>
+      <li><p>Sendo <m>U=\big[(1,0,0),(1,1,1)\big]</m> e
+      <m>V=[(0,1,0),(0,0,1)]</m>, determine sistemas de geradores para
+      <m>U\cap V</m> e <m>U+V</m> (esta soma é direta?).</p>
+      </li>
+      <li><p>Verifique se <me>S=\left\{
+      \begin{pmatrix}
+      1&amp;0\\0&amp;1
+      \end{pmatrix},
+      \begin{pmatrix}
+      1&amp;1\\0&amp;0
+      \end{pmatrix},
+      \begin{pmatrix}
+      0&amp;0\\1&amp;1
+      \end{pmatrix},
+      \begin{pmatrix}
+      0&amp;1\\1&amp;2
+      \end{pmatrix}\right\}</me> gera o espaço <m>M_2(\R)</m>.</p>
+      </li>
+      <li><p>Determine um sistema linear homogêneo cuja solução seja
+      exatamente o subespaço vetorial de <m>\R^4</m> gerado pelos
+      vetores <m>(1,0,1,2)</m> e <m>(0,0,1,0)</m>.</p>
+      </li>
+    </ol>
+  </slide>
+
+  
+</section>
+
