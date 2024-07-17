@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="subesp_soma">
+  <title>Soma de Subespaços</title>
+
+  <slide>
+    <title>Soma de Subespaços - Motivação e Definição</title>    
+
+    <dl pause="yes">
+      <li><p>Se <m>U</m> e <m>W</m> são subespaços de <m>V</m>, vimos
+      que nem sempre <m>U\cup W</m> é um subespaço de <m>V</m>.</p></li>
+      <li><p>Procuramos então o menor subespaço de <m>V</m> que contenha
+      os subespaços <m>U</m> e <m>W</m>.</p></li>
+      <!--<li><p> Uma tentativa é:</p></li>-->
+      <li><p>
+	<definition xml:id="def-subesp_soma">
+	  <idx>Soma de Subespaços</idx><idx><h>soma</h><h>soma de
+	  subespaços</h></idx>
+	  <notation>
+            <usage><m>U+W</m></usage>
+            <description>Soma dos subespaços <m>U</m> e
+            <m>W</m>.</description>
+	  </notation>
+	  <statement>
+            <p>Sejam <m>V</m> um espaço vetorial e <m>U,W\leq V</m>. A
+	    <term>soma dos subespaços <m>U</m> e <m>W</m></term> é o
+	    conjunto <me>U+W=\big\{u+w\colon u\in U, w\in W\big\}.</me></p>
+	  </statement>
+	</definition></p></li>
+	<li><p><proposition xml:id="prop-subesp_soma">
+	<statement>
+	  <p>Sejam <m>V</m> um espaço vetorial e <m>U,W\leq V</m>. Então
+	  <m>U+W</m> é um subespaço vetorial de <m>V</m>.</p>
+	</statement>
+	<!-- <proof> -->
+	<!--   Vamos para a lousa! -->
+	<!-- </proof> -->
+	</proposition></p></li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Soma de Subespaços - Exemplos e Propriedades</title>
+
+    <dl pause="yes">
+      <li><title>Subespaços de <m>V=\R^3</m>:</title>
+      <p>Sejam <m>U=\big\{(x,y,z)\in\R^3\colon x=z\big\}</m>,
+      <m>V=\big\{(x,y,z)\in\R^3\colon x=y=0\big\}</m> e
+      <m>W=\big\{(x,y,z)\in\R^3\colon x+y+z=0\big\}</m>.</p>
+      <p pause="yes">
+	Verifiquemos que <m>\R^3=U+V</m>, <m>\R^3=U+W</m> e
+	<m>\R^3=V+W</m>.</p>
+      <p pause="yes">Há interseção não trivial em algum caso?</p></li>
+      <li><p>Nem sempre a soma de dois subespaços é o espaço
+      todo.</p></li>
+      <li><p><proposition xml:id="prop-subesp_soma-propr">
+	<statement>
+	  <p>Sejam <m>V</m> um espaço vetorial e <m>U,W\leq V</m>. Então
+	  <ol marker="i.">
+	    <li><m>U\subset W\iff U+W=W</m>;</li>
+	    <li><m>U\subset W\iff U\cap W=U</m>;</li>
+	    <li><m>U+W</m> é o "menor" subsespaço de <m>V</m> que contém
+	    <m>U\cup W</m>.</li>
+	  </ol>
+	  </p>
+	</statement>
+	<!-- <proof> -->
+	<!--   Vamos para a lousa! -->
+	<!-- </proof> -->
+      </proposition></p></li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Soma Direta</title>
+
+    <dl pause="yes">
+      <li><p>No exemplo anterior vimos que podemos ter <m>U+W</m> com
+      <m>U\cap W\neq \{\nv\}</m>.</p></li>
+      <li><p> Quando temos <m>U+V</m>, com <m>U\cap W= \{\nv\}</m>,
+      muitas propriedades boas aparecem. Esta situação especial merece
+      a</p></li>
+      <li><p> <definition xml:id="def-subesp_soma-dir"> <idx>Soma Direta
+      de Subespaços</idx><idx><h>soma direta</h><h>soma direta de
+      subespaços</h></idx>
+      <notation>
+	<usage><m>U\oplus W</m></usage>
+	<description>Soma direta dos subespaços <m>U</m> e
+	<m>W</m>.</description>
+      </notation>
+      <statement>
+	<p>Sejam <m>V</m> um espaço vetorial e <m>U,W\leq V</m>. Dizemos
+	que <m>U+W</m> é uma <term>soma direta</term> se <m>U\cap
+	W=\{\nv\}</m>.</p>
+	<p>Neste caso escrevemos <m>U\oplus W</m>.</p>
+      </statement>
+      </definition></p></li>
+      <li><title>Exemplos</title>
+      <p pause="yes">Lâmina anterior.</p>
+      <p pause="yes"><m>V=M_n(\R)</m>; <m>U</m> é o subespaço das matrizes
+      simétricas; <m>W</m> é o subespaço das matrizes
+      antisimétricas.</p>
+      <p pause="yes">Seja <m>I\subseteq \R</m> um intervalo e considere
+      <m>V=C(\R)</m>; <m>U=\big\{f\in C(\R)\colon f(x)=f(-x)\big\}</m>;
+      <m>W=\big\{f\in C(\R)\colon f(x)=-f(-x)\big\}</m>.</p>
+      </li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Soma Direta - Propriedade Importante</title>
+
+    <p><proposition xml:id="prop-subesp_soma-dir-propr">
+	<statement>
+	  <p>Sejam <m>U</m> e <m>W</m> subespaços vetoriais de um espaço
+	  vetorial <m>V</m>. Então <m>V=U\oplus W</m> se, e somente se,
+	  cada vetor <m>v\in V</m> escreve-se de maneira única na forma
+	  <m>v=u+w</m>, com <m>u\in U</m> e <m>w\in W</m>.</p>
+	</statement>
+	<!-- <proof> -->
+	<!--   Vamos para a lousa! -->
+	<!-- </proof> -->
+      </proposition></p>
+    
+  </slide>
+
+  
+</section>
