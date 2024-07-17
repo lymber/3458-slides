@@ -97,5 +97,3 @@ GitHub.sublime-settings
 
 # Don't track codechat config (will be generated automatically)
 codechat_config.yaml
-
-# Don't track codespaces config (will be generated automatically)
