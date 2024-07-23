@@ -57,6 +57,9 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
     <xi:include href="./02-subesp_vet.ptx" />
     <xi:include href="./03-subesp_soma.ptx" />
     <xi:include href="./04-comblin-geradores.ptx" />
+    <xi:include href="./05-dep_lin.ptx" />
+    <xi:include href="./06-base.ptx" />
+    <xi:include href="./07-dimensao.ptx" />
     <!-- <xi:include href="./99-sample_stuff.ptx" /> -->
 
   </slideshow>
