@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="dimensão">
+  <title>Dimensão</title>
+
+  <slide>
+    <title>Dimensão - Preliminares</title>
+
+    <dl pause="yes">
+      <li><p>Começamos com uma sequência de resultados importantes para
+      um espaço vetorial <m>V</m> finitamente gerado.</p></li>
+      <li><p>
+	<lemma xml:id="lem-dim1">
+	  <statement>
+            <p>Sejam <m>B=\{u_1,\ldots,u_n\}</m> uma base de <m>V</m> e
+            <m>u\in V</m> tal que
+            <m>u=\alpha_1u_1+\ldots+\alpha_iu_i+\ldots+\alpha_n
+            u_n,</m> com <m>\alpha_i\neq 0</m>. Então
+            <m>C=\{u_1,\ldots,u_{i-1},u,u_{i+1},\ldots,u_n\}</m> também
+            é base de <m>V</m>.
+	    </p>
+	  </statement>
+      </lemma></p></li>
+      <li><p>
+	<lemma xml:id="lem-dim2">
+	  <statement>
+            <p>Se existe uma base de <m>V</m> com <m>n</m> vetores e
+            <m>B\subset V</m> é um conjunto L.I., também com <m>n</m>
+            vetores, então <m>B</m> é base de <m>V</m>.
+	    </p>
+	  </statement>
+      </lemma></p></li>
+      <li><p>
+	<lemma xml:id="lem-dim3">
+	  <statement>
+            <p>Nas mesma condições do lema acima, todo subconjunto de
+            <m>V</m> que seja L.I. tem, no máximo, <m>n</m> vetores.
+	    </p>
+	  </statement>
+      </lemma></p></li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Dimensão - Definição</title>
+
+    <dl pause="yes">
+      <li><p>
+	<theorem xml:id="teo-dim_inv">
+	  <statement>
+            <p>Duas bases quaisquer de um mesmo espaço vetorial,
+            finitamente gerado, têm o mesmo número de elementos.
+	    </p>
+	  </statement>
+      </theorem></p></li>
+    </dl>
+  </slide>
+</section>
+
