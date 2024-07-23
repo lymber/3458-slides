@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="base">
+  <title>Base</title>
+
+  <slide>
+    <title>Base - Definição</title>
+
+    <dl pause="yes">
+      <li><p>Conseguimos aintgir nosso objetivo!</p></li>
+      <li><p>
+	<definition xml:id="def-base">
+	  <idx>Base</idx><idx><h>bse</h></idx>
+	  <statement>
+            <p>Seja <m>V</m> um espaço vetorial finitamente gerado. Um
+	    subconjunto <m>B\subset V</m> é uma <term>base</term> para
+	    <m>V</m> se
+	    <ol marker="i." pause="yes">
+	      <li><m>[B]=V</m>;</li>
+	      <li><m>B</m> é linearmente independente.</li>
+	    </ol>
+	    </p>
+	  </statement>
+      </definition></p></li>
+      <li><p><term>Convenção:</term> Se <m>V=\{\nv\}</m>, então
+      <m>\emptyset</m> é uma base de <m>V</m>.</p></li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Base - Exemplos e Propriedade</title>
+
+    <dl pause="yes">
+      <li><title>Exemplos:</title>
+      <p pause="yes"><m>B=\big\{(1,0),(0,1)\big\}</m> é base para
+      <m>\R^2</m> como espaço vetorial sobre <m>\R</m>.</p>
+      <p pause="yes"><m>B=\big\{(1,0),(0,1)\big\}</m> é base para
+      <m>\C^2</m> como espaço vetorial sobre <m>\C</m> (e sobre
+      <m>\R</m>, qual seria?).</p>
+      <p pause="yes"><m>B=\left\{
+      \begin{pmatrix}1&amp;0&amp;0\\0&amp;0&amp;0\end{pmatrix},
+      \begin{pmatrix}0&amp;1&amp;0\\0&amp;0&amp;0\end{pmatrix},
+      \begin{pmatrix}0&amp;0&amp;1\\0&amp;0&amp;0\end{pmatrix},
+      \begin{pmatrix}0&amp;0&amp;0\\1&amp;0&amp;0\end{pmatrix},
+      \begin{pmatrix}0&amp;0&amp;0\\0&amp;1&amp;0\end{pmatrix},
+      \begin{pmatrix}0&amp;0&amp;0\\0&amp;0&amp;1\end{pmatrix}
+      \right\}</m> é base para o espaço 
+      <m>M_{2\times 3}(\R)</m>.</p>
+      <p pause="yes"><m>B=\{1,t,\ldots,t^n\}</m> é base de <m>P_n(\R)</m>.</p>
+      </li>
+      <li><p>Um mesmo espaço vetorial têm diversas bases diferentes (cada
+      uma com sua utilidade).</p></li>
+      <li><proposition xml:id="prop-base">
+      <statement>
+        <p>Todo espaço vetorial finitamente gerado tem base.</p>
+      </statement>
+      <proof>
+        <p>É, por si, algoritmo para construir bases.</p>
+      </proof>
+    </proposition></li>
+    </dl>
+  </slide>
+</section>
+
