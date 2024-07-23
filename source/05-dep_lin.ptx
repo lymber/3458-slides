@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="dep_lin">
+  <title>Dependência Linear</title>
+
+  <slide>
+    <title>Dependência Linear - Definição</title>
+
+    <dl pause="yes">
+      <li><p>O objetivo aqui é tentar obter um conjunto "mínimo" de
+      elementos a partir do qual seja possível descrever todos os
+      elementos de um espaço de um espaço vetorial.</p></li>
+      <li><p>
+	<definition xml:id="def-li_ld">
+	  <idx>Linearmente Independente</idx><idx><h>L.I.</h></idx>
+	  <idx>Linearmente Dependente</idx><idx><h>L.D.</h></idx>
+	  <statement>
+            <p>Um conjunto <m>S=\{v_1,\ldots,v_n\}</m> de vetores num
+	    espaço vetorial <m>V</m> é <term>linearmente
+	    independente (L.I.)</term> se a igualdade
+	    <me>\alpha_1 v_1+\ldots+\alpha_n v_n=\nv</me> só ocorre quando
+	    <m>\alpha_1=\ldots=\alpha_n=0</m>.</p>
+	    <p>O conjunto <m>S</m> será <term>linearmente dependente
+	    (L.D.)</term> quando não for L.I., ou seja, quando a
+	    igualdade acima se verifica se que todos os escalares sejam
+	    simultaneamente nulos.
+	    </p>
+	  </statement>
+      </definition></p></li>
+      <li><p><term>Convenção:</term> O conjunto vazio, contido em
+      qualquer espaço, é sempre linearmente independente.</p></li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Dependência Linear - Exemplos</title>
+
+    <dl pause="yes">
+      <li><title>Vetores em <m>\R^n</m>:</title>
+      <p pause="yes">O conjunto
+      <m>S=\big\{(1,1,0,0),(0,2,1,0),(0,0,0,3)\big\}</m> é L.I. em
+      <m>\R^4</m>.</p>
+      <p pause="yes">O conjunto
+      <m>S=\big\{(1,1,0,0),(0,1,0,0),(2,1,0,0)\big\}</m> é L.D. em
+      <m>\R^4</m>.</p></li>
+      <li><title>Matrizes:</title>
+      <p pause="yes">O conjunto <m>S=\left\{ \begin{pmatrix} 1&amp;0\\0&amp;1
+      \end{pmatrix}, \begin{pmatrix} 1&amp;1\\0&amp;0 \end{pmatrix},
+      \begin{pmatrix} 0&amp;0\\1&amp;1 \end{pmatrix}, \begin{pmatrix}
+      0&amp;1\\1&amp;2 \end{pmatrix}\right\}</m> é L.I. em
+      <m>M_2(\R)</m>.</p></li>
+      <li><title>Polinômios:</title>
+      <p pause="yes">O conjunto <m>S=\big\{1,x,x^2,2+x+x^2\}</m> é L.D. em
+      <m>P_3(\R)</m>, mas qualquer subconjunto dele com três elementos é
+      L.I.</p></li>
+      <li><title>Espaços de funções:</title>
+      <p pause="yes">O conjunto <m>S=\{1,\sin t,\cos t\}</m> é L.I. em
+      <m>C(\R)</m>.</p>
+      <p pause="yes">O conjunto <m>S=\{1,\sin^2t,\cos^2 t\}</m> é L.D. em
+      <m>C(\R)</m>.</p></li>
+      <li><title>Depende do corpo:</title>
+      <p><m>S=\big\{1,i\big\}\subset\C</m> é L.I. sobre <m>\R</m>, mas
+      L.D. sobre <m>\C</m>.</p>
+      </li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Dependência Linear - Propriedades</title>
+    <p><proposition xml:id="prop-dep_lin-prop">
+        <statement>
+          <p>Seja <m>V</m> um espaço vetorial sobre <m>\R</m>.</p>
+	  <ol marker="i." pause="yes">
+	    <li><m>\nv \in S\subseteq V\implies S</m> é L.D.;</li>
+	    <li><m>S=\big\{u\big\}\subseteq V,u\neq\nv\implies S</m> é
+	    L.I.;</li>
+	    <li>se <m>S\subseteq V</m> é L.D., então pelo menos um de
+	    seus vetores é combinação linear dos demais;</li>
+	    <li>se <m>S_1,S_2\subseteq V</m> são finitos e não-vazios, com
+	    <m>S_1\subseteq S_2</m> e <m>S_1</m> L.D, então <m>S_2</m>
+	    também é L.D.;</li>
+	    <li>se <m>S_1,S_2\subseteq V</m> são finitos e não-vazios, com
+	    <m>S_1\subseteq S_2</m> e <m>S_2</m> L.I, então <m>S_1</m>
+	    também é L.I.;</li>
+	    <li>se <m>S\subseteq V</m> é L.I. e <m>u\in V</m> é tal que
+	    <m>S\cup\{u\}</m> é L.D., então <m>u\in [S]</m>;</li>
+	    <li>Se <m>S=\{u_1,\ldots,u_j,\ldots,u_n\}</m> e
+	    <m>u_j\in[S-\{u_j\}]</m>, então <m>[S]=\big[S-\{u_j\}\big]</m>.</li>
+	  </ol>
+        </statement>
+        <!-- <proof> -->
+        <!--   Vamos para a lousa! -->
+        <!-- </proof> -->
+    </proposition></p>
+    <dl pause="yes">
+      <li><title>Exemplo</title>
+      <p>Seja
+      <m>S=\big[(1,1,0,0),(0,1,0,2),(0,0,1,0),(0,2,-1,4)\big]\subseteq\R^4</m>.
+      Verifiquemos que
+      <m>S=\big[(1,1,0,0),(0,1,0,2),(0,0,1,0)\big]</m>.</p>
+      </li>
+    </dl>
+  </slide>
+
+  
+</section>
+
