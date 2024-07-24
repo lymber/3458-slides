@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 
-<section xml:id="dimensão">
+<section xml:id="dimensao">
   <title>Dimensão</title>
 
   <slide>
@@ -53,7 +53,88 @@
 	    </p>
 	  </statement>
       </theorem></p></li>
+      <li><p>Com isso temos a:</p> </li>
+      <li><p><definition xml:id="def-dim">
+	  <statement>
+            <p>Seja <m>V</m> um espaço vetorial finitamente gerado. A
+	    <term>dimensão de <m>V</m></term> é o número de elementos de
+	    qualquer base de <m>V</m>.
+	    </p>
+	    <p>Notação: <m>\dim V</m>.</p>
+	  </statement>
+      </definition></p></li>
+      <li><p><term>Observação:</term> Às vezes indicamos o corpo de
+      escalares na notação de dimensão, escrevendo <m>\dim_\R V</m> ou
+      <m>\dim_\C V</m>, por exemplo. Quando não houver confusão esse
+      índice será omitido.</p></li>
     </dl>
   </slide>
+
+  <slide>
+    <title>Dimensão - Exemplos e Propriedades</title>
+
+    <dl pause="yes">
+      <li><title>Exemplos:</title>
+      <p>
+	<ol marker="i." cols="2" pause="yes">
+	  <li><m>\dim\R^n=n</m>;</li>
+	  <li><m>\dim_\C\C^n=n</m>;</li>
+	  <li><m>\dim_\R\C^n=2n</m>;</li>
+	  <li><m>\dim P_n(\R)=n+1</m>;</li>
+	  <li><m>\dim M_{m\times n}(\R)=mn=\dim M_{n\times m}(\R)</m>;</li>
+	  <li><m>\dim \{\nv\}=0</m>.</li>
+	</ol></p></li>
+	<li><title>Propriedades:</title>
+	<p><theorem xml:id="teo-compl">
+	  <statement>
+            <p>Seja <m>V</m> um espaço vetorial, tal que <m>\dim V\geq
+	    1</m>. Se <m>\{u_1,\ldots,u_r\}\subset V</m> é L.I., então
+	    existem <m>n-r</m> vetores <m>u_{r+1},\ldots, u_n\in V</m>
+	    tais que <m>\{u_1,\ldots,u_r,u_{r+1},\ldots,u_n\}</m> é uma
+	    base de <m>V</m>.</p>
+	  </statement>
+	</theorem></p>
+	<p><proposition xml:id="prop-compl">
+	  <statement>
+            <p>Todo subespaço de um espaço vetorial finitamente gerado
+	    também é finitamente gerado.</p>
+	  </statement>
+	</proposition></p>
+	<p><proposition xml:id="prop-subespdim">
+	  <statement>
+            <p>Seja <m>U</m> um subespaço vetorial de <m>V</m>. Se
+	    <m>\dim U=\dim V</m>, então <m>U=V</m>.</p>
+	  </statement>
+	</proposition></p>
+	</li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Dimensão da Soma de Subespaços</title>
+
+    <dl pause="yes">
+      <li><p>Seja <m>W</m> um espaço vetorial de dimensão finita e
+      <m>U,V\leq W</m>.</p></li>
+      <li>
+      <p>Qual a relação entre as dimensões de <m>U</m>, <m>V</m>,
+      <m>U\cap V</m> e <m>U+V</m>?</p></li>
+      <li>
+	<p><proposition xml:id="prop-dimsom">
+	  <statement>
+            <p>Seja <m>W</m> uma espaço vetorial de dimensão finita
+	    sobre <m>\R</m>. Se <m>U</m> e <m>V</m> são subespaços de
+	    <m>W</m>, então <me>\dim(U\cap V)+\dim(U+V)=\dim U+\dim
+	    V.</me></p>
+	  </statement>
+	</proposition></p>
+      </li>
+      <li><title>Exemplo:</title>
+      <p>Considere os seguintes subespaços de <m>\R^4</m>:
+      <me>U=\big[(1,0,1,0),(0,1,0,0)\big]\qquad{e}\qquad
+      V=\big\{(x,y,z,t)\in\R^4\colon x+y=0\big\}.</me> Quais os valores de
+      <m>\dim(U\cap V)</m> e de <m>\dim (U+V)</m>?</p></li>
+    </dl>
+  </slide>  
 </section>
 
