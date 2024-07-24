@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 
 <section xml:id="base">
-  <title>Base</title>
+  <title>Base e Coordenadas</title>
 
   <slide>
     <title>Base - Definição</title>
@@ -50,14 +50,68 @@
       </li>
       <li><p>Um mesmo espaço vetorial têm diversas bases diferentes (cada
       uma com sua utilidade).</p></li>
-      <li><proposition xml:id="prop-base">
+      <li><theorem xml:id="teo-base">
       <statement>
         <p>Todo espaço vetorial finitamente gerado tem base.</p>
+      </statement>
+    </theorem></li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Coordenadas - Definição</title>
+
+    <dl pause="yes">
+      <li><title>Retomando:</title>
+      <p pause="yes">Se <m>B=\big\{u_1,\ldots,u_n\big\}</m> é base de um
+      espaço vetorial finitamente gerado <m>V</m>, então todo <m>v\in
+      V</m> escreve-se como combinação linear dos elementos de <m>B</m>,
+      pois este é um gerador de <m>V</m>: <m>v=\alpha_1
+      v_1+\ldots+\alpha_n v_n.</m></p>
+      <p pause="yes">O fato de <m>B</m> ser L.I. garante que os
+      escalares <m>\alpha_i</m> são únicos!</p>
+      <p pause="yes">Isto motiva a:</p></li>
+      <li><definition xml:id="def-coord">
+      <statement>
+        <p>Sejam <m>V</m> um espaço vetorial finitamente gerado e
+        <m>B=\big\{u_1,\ldots,u_n\big\}</m> uma base de <m>V</m>. Se
+        escrevemos <m>v\in V</m> como <me>v=\alpha_1 v_1+\ldots+\alpha_n
+        v_n,</me> dizemos que a <m>n-</m>upla
+        <m>(\alpha_1,\ldots,\alpha_n)</m> é a <term>representação em
+        coordenadas</term> (ou, simplesmente, as
+        <term>coordenadas</term>) de <m>v</m> na base <m>B</m>.</p>
+	<p>Notação: <m>[v]_B=(\alpha_1,\ldots,\alpha_n)</m>.</p>
       </statement>
       <proof>
         <p>É, por si, algoritmo para construir bases.</p>
       </proof>
-    </proposition></li>
+    </definition></li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Coordenadas - Exemplos</title>
+
+    <dl pause="yes">
+      <li><title>Em <m>\R^3</m>:</title>
+      <p>Coordenadas de <m>(1,2,3)</m> na base
+      <m>B=\big\{(1,1,1),(1,0,1),(1,1,0)\big\}</m>.</p></li>
+      <li><title>Números Complexos (sobre <m>\R</m>):</title>
+      <p pause="yes">Coordenadas de <m>1-2i\in\C</m> na base
+      <m>\{1-i,1+i\}</m>.</p></li>
+      <li><title>Polinômios:</title>
+      <p pause="yes">Coordenadas de <m>2+4t+t^2\in P_2(\R)</m> na base
+      <m>\{1,1+t,1+t^2\}</m>.</p></li>
+      <li><title>Matrizes:</title>
+      <p pause="yes">Coordenadas de
+      <m>\begin{pmatrix}1&amp;-1\\2&amp;0\end{pmatrix}\in M_2(\R)</m> na base 
+      <m>\left\{\begin{pmatrix}1&amp;0\\0&amp;1\end{pmatrix},
+      \begin{pmatrix}0&amp;1\\0&amp;0\end{pmatrix},
+      \begin{pmatrix}0&amp;0\\2&amp;0\end{pmatrix},
+      \begin{pmatrix}0&amp;0\\1&amp;2\end{pmatrix}\right\}</m>.</p></li>
+      <li><title>Funções:</title>
+      <p pause="yes">Coordenadas de <m>f(x)=1\in S</m>, onde
+      <m>S=[B]</m>, <m>B=\big\{\sin^2x,\cos(2x)\big\}</m>.</p></li>
     </dl>
   </slide>
 </section>
