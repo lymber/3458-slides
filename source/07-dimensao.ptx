@@ -126,6 +126,7 @@
 	    sobre <m>\R</m>. Se <m>U</m> e <m>V</m> são subespaços de
 	    <m>W</m>, então <me>\dim(U\cap V)+\dim(U+V)=\dim U+\dim
 	    V.</me></p>
+	    <p>Em particular, <m>\dim U\oplus V=\dim U+\dim V</m>.</p>
 	  </statement>
 	</proposition></p>
       </li>
