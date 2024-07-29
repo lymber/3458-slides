@@ -5,25 +5,16 @@
   <title>Informações do Curso</title>    
 
   <slide>
-    <title>O que é Álgebra Linear</title>
+    <title>Cálculo 2 é continuação do Cálculo 1?</title>
     <ol pause="yes">
-      <li>É uma linguagem poderosa, que permite abordar de maneira geral e
-      simultânea certos conjuntos que possuem uma estrutura algébrica em
-      comum.</li>
-      <li>A partir desta abordagem podemos obter resultados gerais que
-      podem ser interpretados em cada contexto e trazer à luz
-      propriedades ou interpretações dessas propriedades em cada caso
-      específico.</li>
-      <li>Apesar de parecer algo abstrato e complexo, as técnicas
-      utilizadas são sempre muito simples e, não raramente, podem ser
-      implementadas em algoritmos.</li>
-      <li>Além de uma ferramenta teórica muito poderosa, ela permite
-      olhar para problemas concretos de uma maneira objetiva, sendo
-      naturalmente aplicada para resolver problemas
-      (computacionalmente).</li>
-      <li>Se o tempo e o interesse de vocês permitirem, tentaremos trazer
-      algumas dessas aplicações e, eventualmente, implementações em
-      softwares específicos!</li>
+      <li>Sim e não...</li>
+      <li>Vamos estudar agora aspectos "diferenciais" de funções a
+      várias variáveis reais.</li>
+      <li>Para isso vamos precisar de muita coisa do Cálculo 1.</li>
+      <li>Nem sempre é possível reduzir a análise de funções
+      multidimensionais ao estudo de cada uma das variáveis
+      isoladamente.</li>
+      <li>Veremos muita coisa nova e com muitas aplicações modernas!</li>
     </ol>
   </slide>
   
@@ -32,30 +23,21 @@
     
     <p><dl>
       <li>
-	<title>Espaços vetoriais sobre <m>\R</m>:</title>
-	<p>definição e propriedades; subespaços vetoriais; dependência
-	linear; soma de subespaços; base e dimensão.</p>
+	<title>Curvas em <m>\R^n</m>:</title>
+	<p>ferramenta básica para estudar funções a mais de uma variável.</p>
+      </li>      
+      <li>
+	<title>Fuções a várias variáveis reais:</title>
+	<p>limites, continuidade e difereciabilidade.</p>
       </li>
       <li>
-	<title>Transformações lineares:</title>
-	<p>núcleo e imagem; matriz de uma transformação linear.</p>
+	<title>Gradiente e Regra da Cadeia.</title>
       </li>
       <li>
-	<title>Espaços vetoriais com produto interno:</title>
-	<p>ortogonalidade; bases ortonormais; projeção ortogonal.</p>
+	<title>Polinômios de Taylor.</title>
       </li>
       <li>
-	<title>Autovalores e autovetores:</title>
-	<p>diagonalização de operadores lineares</p>
-      </li>
-      <li>
-	<title>Operadores lineares simétricos</title>
-      </li>
-      <li>
-	<title>Espaços Vetoriais sobre <m>\C</m>.</title>
-      </li>
-      <li>
-	<title>Muitas Aplicações!</title>
+	<title>Máximos e Mínimos.</title>
       </li>
     </dl></p>
   </slide>
