@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="subesp_mat">
+  <title>Subespaços associados a uma matriz</title>
+
+  <slide>
+    <title>Matrizes - Espaço-Linha e Espaço-coluna</title>
+
+    <dl pause="yes">
+      <li><p>Buscamos um processo prático para resolver o problema da
+      lâmina anterior.</p></li>
+      <li><p>Seja <m>A=(a_{ij}) \in M_{m\times
+      n}(\R)</m>.</p></li>
+      <li><p>Cada linha de <m>A</m> é um vetor de <m>\R^n</m> e cada
+      coluna é um vetor de <m>\R^m</m>.</p></li>
+      <li><p>O conjunto das combinações lineares das linhas de <m>A</m>
+      é um subespaço vetorial de <m>\R^n</m>, chamado <term>espaço-linha
+      de <m>A</m></term> e denotado por <m>\lin A</m>.</p></li>
+      <li><p>Analogamente, o conjunto das combinações lineares das
+      colunas de <m>A</m> é um subespaço vetorial de <m>\R^m</m>, chamado
+      <term>espaço-coluna de <m>A</m></term> e denotado por <m>\col
+      A</m>.</p></li>
+      <li><title>Exemplo</title>
+      <p>Seja <m>A=\begin{pmatrix}
+      1&amp;0&amp;1&amp;1&amp;-1\\
+      0&amp;1&amp;1&amp;2&amp;1\\
+      1&amp;1&amp;2&amp;1&amp;2
+      \end{pmatrix}</m>. Então
+      <md>
+	<mrow>\lin
+	A&amp;=\big[(1,0,1,1,-1),(0,1,1,2,1),(1,1,2,1,2)\big]</mrow>
+	<mrow>\col
+	A&amp;=\big[(1,0,1),(0,1,1),(1,1,2),(1,2,1),(-1,1,2)\big]</mrow>
+      </md></p></li>
+      <li><p>
+	<definition xml:id="def-matequiv">
+	  <statement>
+            <p>Duas matrizes <m>A,B\in M_{m\times n}(\R)</m> são
+            <term>equivalentes por linhas</term> se obtemos <m>B</m> aplicando
+            um número finito de operações elementares nas linhas de
+            <m>A</m>.
+	    </p>
+	    <p>A equivalência por colunas é definida de maneira
+	    análoga. Diremos que são <term>equivalentes</term> se for
+	    equivalentes por linhas ou por colunas.</p>
+	  </statement>
+      </definition></p></li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Matrizes - Espaço-linha e Espaço Coluna</title>
+
+    <p><proposition xml:id="prop-equivlin" pause="yes">
+	<statement>
+          <p>Toda matriz <m>m\times n</m> não nula é equivalente a uma
+          matriz da forma
+	  <m>\begin{pmatrix}
+	  I_r&amp; \nv_{r\times n-r}\\ \nv_{m-r\times r}&amp;
+	  \nv_{m-r\times n-r}
+	  \end{pmatrix}.</m>
+	  </p>
+	</statement>
+    </proposition></p>
+
+    <p>
+      <proposition xml:id="prop-esplincol">
+	<statement>
+          <p>Sejam <m>A,B\in M_{m\times n}(\R)</m> duas matrizes
+          equivalentes. Então <m>\lin A=\lin B</m> e <m>\col A=\col
+          B</m>.
+	  </p>
+	</statement>
+    </proposition></p>
+
+    <p pause="yes">Com isso podemos determinar de maneira prática bases para
+    <m>\lin A</m> e <m>\col A</m>.</p>
+    <p pause="yes">Exemplo: lâmina anterior.</p>
+    <p pause="yes">E uma base para esses espaços formada pelos vetores linha
+    ou vetores coluna da matriz original?</p>
+    <p pause="yes">Sem problemas: vejamos como fazer em
+    <m>S=\big[(1,0,1),(0,1,1),(1,1,2),(1,2,1),(-1,1,-2)\big]\subseteq\R^3.</m></p>
+    <p pause="yes">Só para subespaços de $<m>\R^n</m>? Claro que não!
+    <m>S=[t^4+t^2+2t+1,
+    t^4+t^2+2t+2,2t^4+t^3+t+2,t^4+t^3-t^2-t]\subseteq P_4(\R)]</m>. (use
+    coordenadas numa base conveniente!)</p>
+  </slide>
+
+  <slide>
+    <title> Matrizes - Completando bases</title>
+    <dl pause="yes">
+      <li><p>Lembrando do Teorema do Completamento <!-- <xref
+    ref="teo-compl" /> -->, dado um conjunto de geradores para um
+      subespaço podemos completá-lo a uma base do espaço todo.</p></li>
+      <li><p>Agora temos um processo "prático" para isso!</p></li>
+      <li><title>Exemplo:</title>
+      <p>Seja
+      <me>S=\big[(1,-2,0,3,-4),(3,2,8,1,4),(2,3,7,2,3),(-1,2,0,4,-3)\big]\subseteq\R^5.</me>
+      <ol marker="a." pause="yes">
+	<li>Obtenha uma base de <m>S</m>.</li>
+	<li>Obtenha uma base de <m>S</m> formada por vetores dentre os
+	geradores dados.</li>
+	<li>Complete esta última base de acima a uma base de
+	<m>\R^5</m>.</li>
+      </ol>
+      </p></li>
+      <li><title>Generalizando:</title>
+      <p>Junto com o último exemplo da lâmina anterior, podemos fazer
+      isso para qualquer espaço finitamente gerado.</p></li>
+    </dl>
+  </slide>
+  
+  <slide>
+    <title>Matrizes - Posto</title>
+
+    <dl pause="yes">
+      <li><definition xml:id="def-posto">
+	<statement>
+          <p>Seja <m>A\in M_{m\times n}(\R)</m>. Definimos o
+          <term>posto-linha de <m>A</m></term> como <m>\dim\lin
+          A</m>.</p>
+	  <p>Analogamente, o <term>posto-coluna de
+          <m>A</m></term> é <m>\dim\col A</m>.</p>
+	</statement>
+      </definition></li>
+      <li><title>Exemplo:</title>
+      <p>Determine o posto-linha e o posto coluna de
+      <m>A=\begin{pmatrix}
+      1&amp;-2&amp;0&amp;3&amp;-4\\ 3&amp;2&amp;8&amp;1&amp;4\\
+      2&amp;3&amp;7&amp;2&amp;3\\ -1&amp;2&amp;0&amp;4&amp;-3
+      \end{pmatrix}</m>.</p></li>
+      <li><theorem xml:id="teo-posto">
+	<statement>
+          <p>Seja <m>A\in M_{m\times n}(\R)</m>. Então o posto-linha e
+	  o posto-coluna de <m>A</m> são iguais.</p>
+	  <p>Notação: <m>\posto A</m>.</p>
+	</statement>
+      </theorem></li>
+    </dl>
+  </slide>
+  
+  <slide>
+    <title>Matrizes - Nulidade</title>
+
+    <dl pause="yes">
+      <li><definition xml:id="def-kernalmat">
+	<statement>
+          <p>Seja <m>A\in M_{m\times n}(\R)</m>. O <term>núcleo de
+          <m>A</m></term> é o subespaço <m>\ker A=\{x\in\R^n\colon
+          Ax=\nv\}</m>.</p>
+	  <p>A <term>nulidade de <m>A</m></term> é <m>\dim\ker
+	  A</m>.</p>
+	  <p>Notação: <m>\nul A</m>.</p>
+	</statement>
+      </definition></li>
+      <li><title>Exemplo:</title>
+      <p>Determine o núcleo e a nulidade de 
+      <m>A=\begin{pmatrix}
+      1&amp;-2&amp;0&amp;3&amp;-4\\ 3&amp;2&amp;8&amp;1&amp;4\\
+      2&amp;3&amp;7&amp;2&amp;3\\ -1&amp;2&amp;0&amp;4&amp;-3
+      \end{pmatrix}</m>.</p></li>
+      <li><theorem xml:id="teo-nucimmat">
+	<statement>
+          <p>Seja <m>A\in M_{m\times n}(\R)</m>. Então <m>\posto A+\nul
+	  A=n</m>.</p>
+	</statement>
+      </theorem></li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Consequências</title>
+
+    <dl pause="yes">
+      <li>
+	<p><corollary xml:id="cor-nucimmat">
+	  <statement>
+            <p>Seja <m>A\in M_{m\times n}(\R)</m>.</p>
+	    <ul pause="yes">
+	      <li>Se <m>m=n</m>, então <m>\posto A=n\iff \det(A)\neq
+	      0</m>.</li>
+	      <li>Se <m>m=n</m>, então <m>\posto A=n</m> se e somente
+	      se <m>A</m> é equivalente à <m>I_n</m> (matriz identidade).</li>
+	      <li>Se <m>m=n</m>, então <m>Ax=\nv</m> tem solução não
+	      trivial se e somente se <m>\posto A &lt; n</m>.</li>
+	      <li>Se <m>m=n</m>, então <m>Ax=b</m> tem solução única
+	      para qualquer <m>b\in\R^n</m> se e somente se <m>\posto A
+	      &lt; n</m>.</li>
+	      <li>Dado <m>b\in\R^n</m>, o sistema <m>Ax=b</m> tem alguma
+	      solução se e somente se <m>\posto A=\posto\big[A|b\big]</m>.</li>
+	    </ul>
+	  </statement>
+	</corollary></p>
+      </li>
+    </dl>
+  </slide>
+</section>
+
