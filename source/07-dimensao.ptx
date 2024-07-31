@@ -87,7 +87,7 @@
 	<li><title>Propriedades:</title>
 	<p><theorem xml:id="teo-compl">
 	  <statement>
-            <p>Seja <m>V</m> um espaço vetorial, tal que <m>\dim V\geq
+            <p>Seja <m>V</m> um espaço vetorial, tal que <m>\dim V=n\geq
 	    1</m>. Se <m>\{u_1,\ldots,u_r\}\subset V</m> é L.I., então
 	    existem <m>n-r</m> vetores <m>u_{r+1},\ldots, u_n\in V</m>
 	    tais que <m>\{u_1,\ldots,u_r,u_{r+1},\ldots,u_n\}</m> é uma
