@@ -76,7 +76,7 @@
 	  f,g\rangle=\displaystyle{\int_a^b f(x)g(x)\, dx^{\dagger}}</m>.</li>
       </ul></p></li>
       <li><title>Para pensar:</title>
-      <ul pause="yes" cols="2">
+      <ul pause="yes">
 	<li><m>(\ast)</m>: por que precisamos de ao menos
 	<m>n+1</m> pontos?</li>
 	<li><m>(\dagger)</m>: por que o intervalo de integração precisa
