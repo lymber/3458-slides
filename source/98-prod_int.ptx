@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="prod_int">
+  <title>Produto Interno</title>
+
+  <slide>
+    <title>Produto interno - Motivação e Definição</title>
+
+    <dl pause="yes">
+      <li><p>Queremos geometria! (sabemos que álgebra linear é geometria)</p></li>
+      <li><p>Ou seja, medir ângulos e comprimentos.</p></li>
+      <li><p>Sabemos fazer isso com vetores do <m>\R^2</m> e
+      <m>\R^3</m>, através do produto escalar:
+      <m>\vec{u}\cdot\vec{v}</m> (lembre-se de suas propriedades)</p></li>
+      <li><p>Comprimento: <m>\|\vec{v}\|=\sqrt{\vec{v}\cdot\vec{v}}</m>
+     e <m>\cos\theta =
+      \dfrac{\vec{u}\cdot\vec{v}}{\|\vec{u}\|\|\vec{v}\|}</m>.</p></li>
+      <li><p>Vamos estender esse conceito para espaços vetoriais, de modo
+      que as proriedades continuem válidas.</p></li>
+      <li><p>
+	<definition xml:id="def-prod_int">
+	  <statement>
+            <p>Seja <m>V</m> um espaço vetorial. Um <term>produto
+	    interno em <m>V</m></term> é uma função <m>\langle
+	    ,\rangle\colon V\times V\to \R</m> satisfazendo:
+	    <ol marker="i" pause="yes">
+	      <li><m>\langle\alpha u_1+u_2,v\rangle=\alpha \langle
+	      u_1,v\rangle+\langle u_2,v\rangle</m>;</li>
+	      <li><m>\langle u,v\rangle=\langle v,u\rangle</m>;</li>
+	      <li><m>\langle u,u\rangle\geq 0</m> e <m>\langle
+	      u,u\rangle=0\iff u=\nv</m>.</li>
+	      </ol>
+	    </p>
+	  </statement>
+      </definition></p></li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title> Produto Interno - Primeiras Propriedades e Exemplos</title>
+    <dl pause="yes">
+      <li><title>Propriedades:</title>
+      <p>
+      <ul pause="yes">
+	<li><m>\langle \nv, v\rangle=0</m>;</li>
+	<li><m>(\alpha+\beta)\langle u,v\rangle=\langle
+	\alpha u,v\rangle+\langle \beta u,v\rangle</m></li>
+ 	<li><m>\langle u, \alpha
+      v_1+v_2,v\rangle=\alpha \langle u, v_1\rangle +\langle
+	u,v_2\rangle</m>;</li>
+      </ul></p></li>
+      <li><title>Nomenclatura</title>
+      <p  pause="yes">Esta última propriedade, junto com a primeira da definição
+      é o que chamamos de <term>bilinearidade</term> do produto
+      interno.</p>
+      <p pause="yes">A segunda é o que chamamos de <term>simetria</term>
+      do produto interno.</p>
+      <p pause="yes">A terceira diz que o produto interno é
+      <term>positivo-definido</term>.</p></li>
+      <li><p>Resumindo, um produto interno em um espaço vetorial é uma
+      aplicação bilinear, simétrica e positiva-definida.</p></li>
+      
+      <li><title>Exemplos:</title>
+      <p>
+	<ul pause="yes">
+	  <li>O produto interno usual em <m>\R^2</m> e <m>\R^3</m>
+	  (generalizar para <m>\R^n</m>).</li>
+	  <li>Em <m>V=M_{m\times n}</m> fazemos <m>\langle
+	  A,B\rangle=\tr(B^tA)</m>.</li>
+ 	  <li>Em <m>V=P_n(\R)</m>, escolhemos <m>k\geq n+1^{(\ast)}</m> números
+	  reais distintos, <m>x_1,\ldots,x_k</m>, e fazemos<m>\langle
+	  p,q\rangle=p(x_1)q(x_1)+\ldots p(x_k)q(x_k)</m>.</li>
+	  <li>Em <m>V=P_n(\R)</m>, fazemos <m>\langle
+	  p,q\rangle=\displaystyle{\int_a^b p(x)q(x)\, dx}</m>.</li>
+	  <li>Em <m>V=C\big([a,b]\big)</m>, fazemos <m>\langle
+	  f,g\rangle=\displaystyle{\int_a^b f(x)g(x)\, dx^{\dagger}}</m>.</li>
+      </ul></p></li>
+      <li><title>Para pensar:</title>
+      <ul pause="yes" cols="2">
+	<li><m>(\ast)</m>: por que precisamos de ao menos
+	<m>n+1</m> pontos?</li>
+	<li><m>(\dagger)</m>: por que o intervalo de integração precisa
+	ser <m>[a,b]</m> e por que precisamos do espaço das funções
+	contínuas.</li>
+      </ul>
+      </li>
+    </dl>
+  </slide>
+  
+  <!-- <slide> -->
+  <!--   <title>Matrizes - Posto</title> -->
+
+  <!--   <dl pause="yes"> -->
+  <!--     <li><definition xml:id="def-posto"> -->
+  <!-- 	<statement> -->
+  <!--         <p>Seja <m>A\in M_{m\times n}(\R)</m>. Definimos o -->
+  <!--         <term>posto-linha de <m>A</m></term> como <m>\dim\lin -->
+  <!--         A</m>.</p> -->
+  <!-- 	  <p>Analogamente, o <term>posto-coluna de -->
+  <!--         <m>A</m></term> é <m>\dim\col A</m>.</p> -->
+  <!-- 	</statement> -->
+  <!--     </definition></li> -->
+  <!--     <li><title>Exemplo:</title> -->
+  <!--     <p>Determine o posto-linha e o posto coluna de -->
+  <!--     <m>A=\begin{pmatrix} -->
+  <!--     1&amp;-2&amp;0&amp;3&amp;-4\\ 3&amp;2&amp;8&amp;1&amp;4\\ -->
+  <!--     2&amp;3&amp;7&amp;2&amp;3\\ -1&amp;2&amp;0&amp;4&amp;-3 -->
+  <!--     \end{pmatrix}</m>.</p></li> -->
+  <!--     <li><theorem xml:id="teo-posto"> -->
+  <!-- 	<statement> -->
+  <!--         <p>Seja <m>A\in M_{m\times n}(\R)</m>. Então o posto-linha e -->
+  <!-- 	  o posto-coluna de <m>A</m> são iguais.</p> -->
+  <!-- 	  <p>Notação: <m>\posto A</m>.</p> -->
+  <!-- 	</statement> -->
+  <!--     </theorem></li> -->
+  <!--   </dl> -->
+  <!-- </slide> -->
+  
+  <!-- <slide> -->
+  <!--   <title>Matrizes - Nulidade</title> -->
+
+  <!--   <dl pause="yes"> -->
+  <!--     <li><definition xml:id="def-kernalmat"> -->
+  <!-- 	<statement> -->
+  <!--         <p>Seja <m>A\in M_{m\times n}(\R)</m>. O <term>núcleo de -->
+  <!--         <m>A</m></term> é o subespaço <m>\ker A=\{x\in\R^n\colon -->
+  <!--         Ax=\nv\}</m>.</p> -->
+  <!-- 	  <p>A <term>nulidade de <m>A</m></term> é <m>\dim\ker -->
+  <!-- 	  A</m>.</p> -->
+  <!-- 	  <p>Notação: <m>\nul A</m>.</p> -->
+  <!-- 	</statement> -->
+  <!--     </definition></li> -->
+  <!--     <li><title>Exemplo:</title> -->
+  <!--     <p>Determine o núcleo e a nulidade de  -->
+  <!--     <m>A=\begin{pmatrix} -->
+  <!--     1&amp;-2&amp;0&amp;3&amp;-4\\ 3&amp;2&amp;8&amp;1&amp;4\\ -->
+  <!--     2&amp;3&amp;7&amp;2&amp;3\\ -1&amp;2&amp;0&amp;4&amp;-3 -->
+  <!--     \end{pmatrix}</m>.</p></li> -->
+  <!--     <li><theorem xml:id="teo-nucimmat"> -->
+  <!-- 	<statement> -->
+  <!--         <p>Seja <m>A\in M_{m\times n}(\R)</m>. Então <m>\posto A+\nul -->
+  <!-- 	  A=n</m>.</p> -->
+  <!-- 	</statement> -->
+  <!--     </theorem></li> -->
+  <!--   </dl> -->
+  <!-- </slide> -->
+
+  <!-- <slide> -->
+  <!--   <title>Consequências</title> -->
+
+  <!--   <dl pause="yes"> -->
+  <!--     <li> -->
+  <!-- 	<p><corollary xml:id="cor-nucimmat"> -->
+  <!-- 	  <statement> -->
+  <!--           <p>Seja <m>A\in M_{m\times n}(\R)</m>.</p> -->
+  <!-- 	    <ul pause="yes"> -->
+  <!-- 	      <li>Se <m>m=n</m>, então <m>\posto A=n\iff \det(A)\neq -->
+  <!-- 	      0</m>.</li> -->
+  <!-- 	      <li>Se <m>m=n</m>, então <m>\posto A=n</m> se e somente -->
+  <!-- 	      se <m>A</m> é equivalente à <m>I_n</m> (matriz identidade).</li> -->
+  <!-- 	      <li>Se <m>m=n</m>, então <m>Ax=\nv</m> tem solução não -->
+  <!-- 	      trivial se e somente se <m>\posto A &lt; n</m>.</li> -->
+  <!-- 	      <li>Se <m>m=n</m>, então <m>Ax=b</m> tem solução única -->
+  <!-- 	      para qualquer <m>b\in\R^n</m> se e somente se <m>\posto A -->
+  <!-- 	      &lt; n</m>.</li> -->
+  <!-- 	      <li>Dado <m>b\in\R^n</m>, o sistema <m>Ax=b</m> tem alguma -->
+  <!-- 	      solução se e somente se <m>\posto A=\posto\big[A|b\big]</m>.</li> -->
+  <!-- 	    </ul> -->
+  <!-- 	  </statement> -->
+  <!-- 	</corollary></p> -->
+  <!--     </li> -->
+  <!--   </dl> -->
+  <!-- </slide> -->
+</section>
+
