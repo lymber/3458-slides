@@ -98,7 +98,7 @@
       <me>S=\big[(1,-2,0,3,-4),(3,2,8,1,4),(2,3,7,2,3),(-1,2,0,4,-3)\big]\subseteq\R^5.</me>
       <ol marker="a." pause="yes">
 	<li>Obtenha uma base de <m>S</m>.</li>
-	<li>Obtenha uma base de <m>S</m> formada por vetores dentre os
+	<li>Obtenha uma base de <m>S</m> contendo vetores dentre os
 	geradores dados.</li>
 	<li>Complete esta última base de acima a uma base de
 	<m>\R^5</m>.</li>
