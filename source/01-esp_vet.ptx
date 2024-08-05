@@ -70,14 +70,14 @@
 	    <li><p>uma <term>multiplicação por escalar</term>,
 	    <m>(\alpha,u)\mapsto \alpha u</m>, satisfazendo
 	    <ol marker="a.">
-	      <li><m>(\alpha\beta)\vec{u}=\alpha(\beta\vec{u})</m>, para
+	      <li><m>(\alpha\beta)u=\alpha(\beta u)</m>, para
 	      todos <m>\alpha,\beta\in\R</m> e todo <m>u\in V</m>;</li>
-	      <li><m>(\alpha+\beta)\vec{u}=\alpha\vec{u}+\beta\vec{u}</m>,
+	      <li><m>(\alpha+\beta)u=\alpha u+\beta u</m>,
 	      para todos <m>\alpha,\beta\in\R</m> e todo <m>u\in
 	      V</m>;</li>
-	      <li><m>\alpha(\vec{u}+\vec{v})=\alpha\vec{u}+\alpha\vec{v}</m>, para
+	      <li><m>\alpha(u+v)=\alpha u+\alpha v</m>, para
 	      todo <m>\alpha\in\R</m> e todos <m>u,v\in V</m>;</li>
-	      <li><m>1\vec{u}=\vec{u}</m>, para todo <m>u\in V</m>.</li>
+	      <li><m>1 u=u</m>, para todo <m>u\in V</m>.</li>
 	    </ol></p></li>
 	  </ul>
 	</subslide>
