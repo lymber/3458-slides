@@ -28,6 +28,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
       \DeclareMathOperator{\col}{col}
       \DeclareMathOperator{\posto}{posto}
       \DeclareMathOperator{\nul}{nul}
+      \DeclareMathOperator{\id}{Id}
     </macros>
   </docinfo>
 
@@ -65,6 +66,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
     <xi:include href="./06-base.ptx" />
     <xi:include href="./07-dimensao.ptx" />
     <xi:include href="./08-matrizes.ptx" />
+    <xi:include href="./09-transf_lin.ptx" />
     <xi:include href="./98-prod_int.ptx" />
     <!-- <xi:include href="./99-sample_stuff.ptx" /> -->
 
