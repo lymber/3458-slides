@@ -16,7 +16,7 @@
       <m>f(x)=ax</m>, com <m>a\in\R</m> fixado.</p>
       <p>Como deve ser uma função <m>f\colon\R\to\R</m> que preserva as
       operações de soma e multiplicação por escalar?</p></li>
-      <li><p><definition xml:id="def-transf_lin2">
+      <li><p><definition xml:id="def-transf_lin">
 	<statement>
           <p>Sejam <m>U</m> e <m>V</m> espaços vetorias. Uma
 	  <term>transformação linear de <m>U</m> em <m>V</m></term> é
@@ -29,8 +29,8 @@
 	</statement>
       </definition></p></li>
       <li><title>Observações</title>
-      <p>Utilizamos, por puro conforto, os símbolos para as operações em
-      <m>U</m> e em <m>V</m>. Cuidado!</p>
+      <p>Utilizamos, por puro conforto, os mesmos símbolos para as
+      operações em <m>U</m> e em <m>V</m>. Cuidado!</p>
       <p>Uma transformação linear <m>T\colon U\to U</m> também é chamada
       de <term>operador linear</term>.</p>
       </li>
@@ -53,156 +53,142 @@
       <m>T(x)=Ax</m>.</p></li>
       <li><p><m>D\colon P_n(\R)\to P_n(\R)</m>, dado por
       <m>D\big(p(t)\big)=p'(t)</m>.</p></li>
-      <li><p>Calcula a primitiva que no zero vale zero</p></li>
-      <li><p>integral de contínua num intervalo</p></li>
+      <li><p><m>I\colon P_n(\R)\to P_{n+1}(\R)</m> dada por
+      <m>I\big(p(x)\big)=\displaystyle{\int_0^x p(t)\, dt}</m>.</p></li>
+      <li><p><m>A\colon C\big([a,b]\big)\to\R</m>, dada por
+      <m>A(f)=\displaystyle{\int_a^b f(x)\, dx}</m>.</p></li>
+      <li><title>Propriedades:</title>
+      <proposition xml:id="prop-transf_lin-prop">
+	<statement>
+          <p>Sejam <m>U</m> e <m>V</m> espaços vetorias e <m>T\colon
+	  U\to V</m> uma transformação linear. Então:
+	  <ol marker="i." cols="2" pause="yes">
+	    <li><m>T(\nv)=\nv;</m></li>
+	    <li><m>T(-u)=-T(u)</m>.</li>
+	    <li><m>T(u_1-u_2)=T(u_1)-T(u_2)</m>.</li>
+	    <li>Se <m>W\leq U</m>, então <m>T(W)=\big\{v\in V\colon
+	    v=T(w)\text{ para algum }w\in W\big\}</m> é um subespaço de
+	    <m>V</m>.</li>
+	  </ol>
+	  </p>
+	</statement>
+      </proposition>
+      </li>
+      <li><p><term>Observação:</term> A <term>imagem de <m>T</m></term>
+      é o conjunto (subespaço, na verdade) <m>\im T=T(U)</m>.</p></li>
     </dl>
   </slide>
     
-  <!-- <slide> -->
-  <!--   <title>Matrizes - Espaço-linha e Espaço Coluna</title> -->
+  <slide>
+    <title>Transformações Lineares - Núcleo e Imagem I</title>
 
-  <!--   <p><proposition xml:id="prop-equivlin" pause="yes"> -->
-  <!-- 	<statement> -->
-  <!--         <p>Toda matriz <m>m\times n</m> não nula é equivalente a uma -->
-  <!--         matriz da forma -->
-  <!-- 	  <m>\begin{pmatrix} -->
-  <!-- 	  I_r&amp; \nv_{r\times n-r}\\ \nv_{m-r\times r}&amp; -->
-  <!-- 	  \nv_{m-r\times n-r} -->
-  <!-- 	  \end{pmatrix}.</m> -->
-  <!-- 	  </p> -->
-  <!-- 	</statement> -->
-  <!--   </proposition></p> -->
+    <p><definition xml:id="def-nucleo">
+	<statement>
+	  <p>Seja <m>T\colon U\to V</m> uma transformação linear. O
+	  <term>núcleo de <m>T</m></term> é o conjunto <me>\ker
+	  T=\big\{u\in\ U\colon T(u)=\nv\big\}.</me></p>
+	  <p><term>Observação:</term> Na literatura é comum encontrar a
+	  nomenclatura <term>kernel de <m>T</m></term>.</p>
+	</statement>
+    </definition></p>
 
-  <!--   <p> -->
-  <!--     <proposition xml:id="prop-esplincol"> -->
-  <!-- 	<statement> -->
-  <!--         <p>Sejam <m>A,B\in M_{m\times n}(\R)</m> duas matrizes -->
-  <!--         equivalentes. Então <m>\lin A=\lin B</m> e <m>\col A=\col -->
-  <!--         B</m>. -->
-  <!-- 	  </p> -->
-  <!-- 	</statement> -->
-  <!--   </proposition></p> -->
+    <dl pause="yes">
+      <li><title>Exemplos:</title>
+      <p><m>T\colon\R^3\to\R^2</m>, <m>T(x,y,z)=(x+y,2x-y+z)</m>.</p>
+      <p pause="yes"><m>D\colon P_n(\R)\to P_n(\R)</m>,
+      <m>D\big(p(x)\big)=p'(x)</m>.</p>
+      </li>
+    </dl>
+    <p pause="yes"><proposition xml:id="prop-nucsubesp">
+      <statement>
+        <p>Seja <m>T\colon U\to V</m> uma transformação linear. Então:
+	<ol marker="i">
+	  <li><m>\ker T</m> é subespaço vetorial de <m>U;</m></li>
+	  <li><m>T</m> é injetora se e somente se <m>\ker
+	  T=\{\nv\}</m>.</li>
+	</ol>
+	</p>
+      </statement>
+    </proposition></p>
+  </slide>
 
-  <!--   <p pause="yes">Com isso podemos determinar de maneira prática bases para -->
-  <!--   <m>\lin A</m> e <m>\col A</m>.</p> -->
-  <!--   <p pause="yes">Exemplo: lâmina anterior.</p> -->
-  <!--   <p pause="yes">E uma base para esses espaços formada pelos vetores linha -->
-  <!--   ou vetores coluna da matriz original?</p> -->
-  <!--   <p pause="yes">Sem problemas: vejamos como fazer em -->
-  <!--   <m>S=\big[(1,0,1),(0,1,1),(1,1,2),(1,2,1),(-1,1,-2)\big]\subseteq\R^3.</m></p> -->
-  <!--   <p pause="yes">Só para subespaços de $<m>\R^n</m>? Claro que não! -->
-  <!--   <m>S=[t^4+t^2+2t+1, -->
-  <!--   t^4+t^2+2t+2,2t^4+t^3+t+2,t^4+t^3-t^2-t]\subseteq P_4(\R)]</m>. (use -->
-  <!--   coordenadas numa base conveniente!)</p> -->
-  <!-- </slide> -->
-
-  <!-- <slide> -->
-  <!--   <title> Matrizes - Completando bases</title> -->
-  <!--   <dl pause="yes"> -->
-  <!--     <li><p>Lembrando do Teorema do Completamento <!-\- <xref -->
-  <!--   ref="teo-compl" /> -\->, dado um conjunto de geradores para um -->
-  <!--     subespaço podemos completá-lo a uma base do espaço todo.</p></li> -->
-  <!--     <li><p>Agora temos um processo "prático" para isso!</p></li> -->
-  <!--     <li><title>Exemplo:</title> -->
-  <!--     <p>Seja -->
-  <!--     <me>S=\big[(1,-2,0,3,-4),(3,2,8,1,4),(2,3,7,2,3),(-1,2,0,4,-3)\big]\subseteq\R^5.</me> -->
-  <!--     <ol marker="a." pause="yes"> -->
-  <!-- 	<li>Obtenha uma base de <m>S</m>.</li> -->
-  <!-- 	<li>Obtenha uma base de <m>S</m> contendo vetores dentre os -->
-  <!-- 	geradores dados.</li> -->
-  <!-- 	<li>Complete esta última base de acima a uma base de -->
-  <!-- 	<m>\R^5</m>.</li> -->
-  <!--     </ol> -->
-  <!--     </p></li> -->
-  <!--     <li><title>Generalizando:</title> -->
-  <!--     <p>Junto com o último exemplo da lâmina anterior, podemos fazer -->
-  <!--     isso para qualquer espaço finitamente gerado.</p></li> -->
-  <!--   </dl> -->
-  <!-- </slide> -->
+  <slide>
+    <title>Transformações Lineares - Núcleo e Imagem II</title>
+    <theorem xml:id="teo-nucimg">
+      <statement>
+        <p>Seja <m>T\colon U\to V</m> uma transformação linear entre
+	espaços vetoriais de dimensão finita. Então <me>\dim U=\dim \ker
+	T+\dim \im T.</me>
+	</p>
+      </statement>
+    </theorem>
+    <corollary xml:id="cor-transf_lin-equivs">
+      <statement>
+        <p>Seja <m>T\colon U\to V</m> uma transformação linear entre
+	espaços vetoriais de mesma dimensão finita. São equivalentes:
+	<ol marker="i.">
+	  <li><m>T</m> é sobretora;</li>
+	  <li><m>T</m> é bijetora;</li>
+	  <li><m>T</m> é injetora;</li>
+	  <li><m>T</m> leva qualquer base de <m>U</m> numa base de
+	  <m>V</m>.</li>
+	  </ol>
+	</p>
+      </statement>
+    </corollary>
+  </slide>
   
-  <!-- <slide> -->
-  <!--   <title>Matrizes - Posto</title> -->
+  <slide>
+    <title>Transformações Lineares - Isomorfismos</title>
 
-  <!--   <dl pause="yes"> -->
-  <!--     <li><definition xml:id="def-posto"> -->
-  <!-- 	<statement> -->
-  <!--         <p>Seja <m>A\in M_{m\times n}(\R)</m>. Definimos o -->
-  <!--         <term>posto-linha de <m>A</m></term> como <m>\dim\lin -->
-  <!--         A</m>.</p> -->
-  <!-- 	  <p>Analogamente, o <term>posto-coluna de -->
-  <!--         <m>A</m></term> é <m>\dim\col A</m>.</p> -->
-  <!-- 	</statement> -->
-  <!--     </definition></li> -->
-  <!--     <li><title>Exemplo:</title> -->
-  <!--     <p>Determine o posto-linha e o posto coluna de -->
-  <!--     <m>A=\begin{pmatrix} -->
-  <!--     1&amp;-2&amp;0&amp;3&amp;-4\\ 3&amp;2&amp;8&amp;1&amp;4\\ -->
-  <!--     2&amp;3&amp;7&amp;2&amp;3\\ -1&amp;2&amp;0&amp;4&amp;-3 -->
-  <!--     \end{pmatrix}</m>.</p></li> -->
-  <!--     <li><theorem xml:id="teo-posto"> -->
-  <!-- 	<statement> -->
-  <!--         <p>Seja <m>A\in M_{m\times n}(\R)</m>. Então o posto-linha e -->
-  <!-- 	  o posto-coluna de <m>A</m> são iguais.</p> -->
-  <!-- 	  <p>Notação: <m>\posto A</m>.</p> -->
-  <!-- 	</statement> -->
-  <!--     </theorem></li> -->
-  <!--   </dl> -->
-  <!-- </slide> -->
+    <definition xml:id="def-iso">
+      <statement>
+        <p>Uma transformação linear <m>T\colon U\to V</m> é um
+	<term>isomorfismo</term> se for bijetora.</p>
+	<p>Um isomorfismo <m>T\colon U\to U</m> é chamado
+	<term>automorfismo</term>.</p>
+      </statement>
+    </definition>
+    <dl pause="yes">
+      <li><title>Exemplos:</title>
+      <p pause="yes"><m>I\colon U\to U</m>, dado por
+      <m>I(u)=u</m>.</p>
+      <p pause="yes"><m>T\colon\R^2\to P_1(\R)</m>, dado por
+      <m>T(x,y)=x+(x+y)t</m>.</p>
+      </li>
+    </dl>
+    <proposition xml:id="prop-tlinv">
+      <statement>
+        <p>Se <m>T\colon U\to V</m> é um isomorfismo, então
+        <m>T^{-1}\colon V\to U</m> também é um isomorfismo.</p>
+      </statement>
+    </proposition>
+
+  </slide>
   
-  <!-- <slide> -->
-  <!--   <title>Matrizes - Nulidade</title> -->
+  <slide>
+    <title>Transformações Lineares - Teorema do Isomorfismo</title>
 
-  <!--   <dl pause="yes"> -->
-  <!--     <li><definition xml:id="def-kernalmat"> -->
-  <!-- 	<statement> -->
-  <!--         <p>Seja <m>A\in M_{m\times n}(\R)</m>. O <term>núcleo de -->
-  <!--         <m>A</m></term> é o subespaço <m>\ker A=\{x\in\R^n\colon -->
-  <!--         Ax=\nv\}</m>.</p> -->
-  <!-- 	  <p>A <term>nulidade de <m>A</m></term> é <m>\dim\ker -->
-  <!-- 	  A</m>.</p> -->
-  <!-- 	  <p>Notação: <m>\nul A</m>.</p> -->
-  <!-- 	</statement> -->
-  <!--     </definition></li> -->
-  <!--     <li><title>Exemplo:</title> -->
-  <!--     <p>Determine o núcleo e a nulidade de  -->
-  <!--     <m>A=\begin{pmatrix} -->
-  <!--     1&amp;-2&amp;0&amp;3&amp;-4\\ 3&amp;2&amp;8&amp;1&amp;4\\ -->
-  <!--     2&amp;3&amp;7&amp;2&amp;3\\ -1&amp;2&amp;0&amp;4&amp;-3 -->
-  <!--     \end{pmatrix}</m>.</p></li> -->
-  <!--     <li><theorem xml:id="teo-nucimmat"> -->
-  <!-- 	<statement> -->
-  <!--         <p>Seja <m>A\in M_{m\times n}(\R)</m>. Então <m>\posto A+\nul -->
-  <!-- 	  A=n</m>.</p> -->
-  <!-- 	</statement> -->
-  <!--     </theorem></li> -->
-  <!--   </dl> -->
-  <!-- </slide> -->
+    <lemma xml:id="lem-tldef">
+      <statement>
+        <p>Sejam <m>U</m> e <m>V</m> espaços vetoriais tais que
+	<m>B=\{u_1,\ldots,u_n\}</m> é uma base de <m>U</m> e
+	<m>v_1,\ldots,v_n</m> é um conjunto qualquer de vetores em
+	<m>V</m>. A função <m>T\colon U\to V</m> dada por <me>
+	T\Big(\sum\limits_{i=1}^n \alpha_i
+	u_i\Big)=\sum\limits_{i=1}^n \alpha_i v_i</me> é
+	linear, e satisfaz <m>T(u_i)=v_i</m>. Além disso, se
+	  <m>S\colon U\to V</m> é tal que <m>S(u_i)=v_i</m>, então
+	<m>S=T</m>.</p>
+      </statement>
+    </lemma>
 
-  <!-- <slide> -->
-  <!--   <title>Consequências</title> -->
-
-  <!--   <dl pause="yes"> -->
-  <!--     <li> -->
-  <!-- 	<p><corollary xml:id="cor-nucimmat"> -->
-  <!-- 	  <statement> -->
-  <!--           <p>Seja <m>A\in M_{m\times n}(\R)</m>.</p> -->
-  <!-- 	    <ul pause="yes"> -->
-  <!-- 	      <li>Se <m>m=n</m>, então <m>\posto A=n\iff \det(A)\neq -->
-  <!-- 	      0</m>.</li> -->
-  <!-- 	      <li>Se <m>m=n</m>, então <m>\posto A=n</m> se e somente -->
-  <!-- 	      se <m>A</m> é equivalente à <m>I_n</m> (matriz identidade).</li> -->
-  <!-- 	      <li>Se <m>m=n</m>, então <m>Ax=\nv</m> tem solução não -->
-  <!-- 	      trivial se e somente se <m>\posto A &lt; n</m>.</li> -->
-  <!-- 	      <li>Se <m>m=n</m>, então <m>Ax=b</m> tem solução única -->
-  <!-- 	      para qualquer <m>b\in\R^n</m> se e somente se <m>\posto A -->
-  <!-- 	      &lt; n</m>.</li> -->
-  <!-- 	      <li>Dado <m>b\in\R^n</m>, o sistema <m>Ax=b</m> tem alguma -->
-  <!-- 	      solução se e somente se <m>\posto A=\posto\big[A|b\big]</m>.</li> -->
-  <!-- 	    </ul> -->
-  <!-- 	  </statement> -->
-  <!-- 	</corollary></p> -->
-  <!--     </li> -->
-  <!--   </dl> -->
-  <!-- </slide> -->
+    <theorem xml:id="teo-iso">
+      <statement>
+        <p>Dois espaços vetoriais <m>U</m> e <m>V</m>, de dimensão
+	finita, são isomofos se, e somente se, <m>\dim U=\dim V</m>.</p>
+      </statement>
+    </theorem>
+  </slide>
 </section>
 
