@@ -29,6 +29,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
       \DeclareMathOperator{\posto}{posto}
       \DeclareMathOperator{\nul}{nul}
       \DeclareMathOperator{\id}{Id}
+      \DeclareMathOperator{\im}{Im}
     </macros>
   </docinfo>
 
