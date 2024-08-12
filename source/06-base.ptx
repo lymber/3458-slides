@@ -75,8 +75,8 @@
       <statement>
         <p>Sejam <m>V</m> um espaço vetorial finitamente gerado e
         <m>B=\big\{u_1,\ldots,u_n\big\}</m> uma base de <m>V</m>. Se
-        escrevemos <m>v\in V</m> como <me>v=\alpha_1 v_1+\ldots+\alpha_n
-        v_n,</me> dizemos que a <m>n-</m>upla
+        escrevemos <m>v\in V</m> como <me>v=\alpha_1 u_1+\ldots+\alpha_n
+        u_n,</me> dizemos que a <m>n-</m>upla
         <m>(\alpha_1,\ldots,\alpha_n)</m> é a <term>representação em
         coordenadas</term> (ou, simplesmente, as
         <term>coordenadas</term>) de <m>v</m> na base <m>B</m>.</p>
