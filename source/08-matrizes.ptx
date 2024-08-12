@@ -53,12 +53,11 @@
 
     <p><proposition xml:id="prop-equivlin" pause="yes">
 	<statement>
-          <p>Toda matriz <m>m\times n</m> não nula é equivalente a uma
-          matriz da forma
-	  <m>\begin{pmatrix}
-	  I_r&amp; \nv_{r\times n-r}\\ \nv_{m-r\times r}&amp;
-	  \nv_{m-r\times n-r}
-	  \end{pmatrix}.</m>
+          <p>Toda matriz <m>m\times n</m> não nula é equivalente,
+          mediante operações elementares nas linhas e nas colunas, a uma
+          matriz da forma <m>\begin{pmatrix} I_r&amp; \nv_{r\times
+          n-r}\\ \nv_{m-r\times r}&amp; \nv_{m-r\times n-r}
+          \end{pmatrix}.</m>
 	  </p>
 	</statement>
     </proposition></p>
@@ -80,7 +79,7 @@
     ou vetores coluna da matriz original?</p>
     <p pause="yes">Sem problemas: vejamos como fazer em
     <m>S=\big[(1,0,1),(0,1,1),(1,1,2),(1,2,1),(-1,1,-2)\big]\subseteq\R^3.</m></p>
-    <p pause="yes">Só para subespaços de $<m>\R^n</m>? Claro que não!
+    <p pause="yes">Só para subespaços de <m>\R^n</m>? Claro que não!
     <m>S=[t^4+t^2+2t+1,
     t^4+t^2+2t+2,2t^4+t^3+t+2,t^4+t^3-t^2-t]\subseteq P_4(\R)]</m>. (use
     coordenadas numa base conveniente!)</p>
@@ -124,7 +123,7 @@
 	</statement>
       </definition></li>
       <li><title>Exemplo:</title>
-      <p>Determine o posto-linha e o posto coluna de
+      <p>Determine o posto-linha e o posto-coluna de
       <m>A=\begin{pmatrix}
       1&amp;-2&amp;0&amp;3&amp;-4\\ 3&amp;2&amp;8&amp;1&amp;4\\
       2&amp;3&amp;7&amp;2&amp;3\\ -1&amp;2&amp;0&amp;4&amp;-3
