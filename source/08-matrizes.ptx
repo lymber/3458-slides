@@ -183,8 +183,8 @@
 	      <li>Se <m>m=n</m>, então <m>Ax=\nv</m> tem solução não
 	      trivial se e somente se <m>\posto A &lt; n</m>.</li>
 	      <li>Se <m>m=n</m>, então <m>Ax=b</m> tem solução única
-	      para qualquer <m>b\in\R^n</m> se e somente se <m>\posto A
-	      &lt; n</m>.</li>
+	      para qualquer <m>b\in\R^n</m> se e somente se <m>\posto
+	      A=n</m>.</li>
 	      <li>Dado <m>b\in\R^n</m>, o sistema <m>Ax=b</m> tem alguma
 	      solução se e somente se <m>\posto A=\posto\big[A|b\big]</m>.</li>
 	    </ul>
