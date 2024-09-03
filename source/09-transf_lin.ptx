@@ -16,7 +16,7 @@
       <m>f(x)=ax</m>, com <m>a\in\R</m> fixado.</p>
       <p>Como deve ser uma função <m>f\colon\R\to\R</m> que preserva as
       operações de soma e multiplicação por escalar?</p></li>
-      <li><p><definition xml:id="def-transf_lin">
+      <li><definition xml:id="def-transf_lin">
 	<statement>
           <p>Sejam <m>U</m> e <m>V</m> espaços vetorias. Uma
 	  <term>transformação linear de <m>U</m> em <m>V</m></term> é
@@ -27,7 +27,7 @@
 	  </ol>
 	  </p>
 	</statement>
-      </definition></p></li>
+      </definition></li>
       <li><title>Observações</title>
       <p>Utilizamos, por puro conforto, os mesmos símbolos para as
       operações em <m>U</m> e em <m>V</m>. Cuidado!</p>
@@ -38,7 +38,7 @@
   </slide>
 
   <slide>
-    <title>Transformações Lineares - Exemplos</title>
+    <title>Transformações Lineares - Exemplos e Propriedades</title>
 
     <dl pause="yes">
       <li><p>Se <m>V</m> é um espaço vetorial qualquer, as aplicações
@@ -57,7 +57,7 @@
       <m>I\big(p(x)\big)=\displaystyle{\int_0^x p(t)\, dt}</m>.</p></li>
       <li><p><m>A\colon C\big([a,b]\big)\to\R</m>, dada por
       <m>A(f)=\displaystyle{\int_a^b f(x)\, dx}</m>.</p></li>
-      <li><title>Propriedades:</title>
+      <li>
       <proposition xml:id="prop-transf_lin-prop">
 	<statement>
           <p>Sejam <m>U</m> e <m>V</m> espaços vetorias e <m>T\colon
@@ -82,7 +82,8 @@
   <slide>
     <title>Transformações Lineares - Núcleo e Imagem I</title>
 
-    <p><definition xml:id="def-nucleo">
+    <dl pause="yes">
+      <li><definition xml:id="def-nucleo">
 	<statement>
 	  <p>Seja <m>T\colon U\to V</m> uma transformação linear. O
 	  <term>núcleo de <m>T</m></term> é o conjunto <me>\ker
@@ -90,26 +91,24 @@
 	  <p><term>Observação:</term> Na literatura é comum encontrar a
 	  nomenclatura <term>kernel de <m>T</m></term>.</p>
 	</statement>
-    </definition></p>
-
-    <dl pause="yes">
+      </definition></li>
       <li><title>Exemplos:</title>
       <p><m>T\colon\R^3\to\R^2</m>, <m>T(x,y,z)=(x+y,2x-y+z)</m>.</p>
       <p pause="yes"><m>D\colon P_n(\R)\to P_n(\R)</m>,
       <m>D\big(p(x)\big)=p'(x)</m>.</p>
       </li>
+      <li><proposition xml:id="prop-nucsubesp">
+	<statement>
+          <p>Seja <m>T\colon U\to V</m> uma transformação linear. Então:
+	  <ol marker="i">
+	    <li><m>\ker T</m> é subespaço vetorial de <m>U;</m></li>
+	    <li><m>T</m> é injetora se e somente se <m>\ker
+	    T=\{\nv\}</m>.</li>
+	  </ol>
+	  </p>
+	</statement>
+      </proposition></li>
     </dl>
-    <p pause="yes"><proposition xml:id="prop-nucsubesp">
-      <statement>
-        <p>Seja <m>T\colon U\to V</m> uma transformação linear. Então:
-	<ol marker="i">
-	  <li><m>\ker T</m> é subespaço vetorial de <m>U;</m></li>
-	  <li><m>T</m> é injetora se e somente se <m>\ker
-	  T=\{\nv\}</m>.</li>
-	</ol>
-	</p>
-      </statement>
-    </proposition></p>
   </slide>
 
   <slide>
@@ -141,29 +140,28 @@
   <slide>
     <title>Transformações Lineares - Isomorfismos</title>
 
-    <definition xml:id="def-iso">
-      <statement>
-        <p>Uma transformação linear <m>T\colon U\to V</m> é um
-	<term>isomorfismo</term> se for bijetora.</p>
-	<p>Um isomorfismo <m>T\colon U\to U</m> é chamado
-	<term>automorfismo</term>.</p>
-      </statement>
-    </definition>
     <dl pause="yes">
+      <li><definition xml:id="def-iso">
+	<statement>
+          <p>Uma transformação linear <m>T\colon U\to V</m> é um
+	  <term>isomorfismo</term> se for bijetora.</p>
+	  <p>Um isomorfismo <m>T\colon U\to U</m> é chamado
+	  <term>automorfismo</term>.</p>
+	</statement>
+      </definition></li>
       <li><title>Exemplos:</title>
       <p pause="yes"><m>I\colon U\to U</m>, dado por
       <m>I(u)=u</m>.</p>
       <p pause="yes"><m>T\colon\R^2\to P_1(\R)</m>, dado por
       <m>T(x,y)=x+(x+y)t</m>.</p>
       </li>
+      <li><proposition xml:id="prop-tlinv">
+	<statement>
+          <p>Se <m>T\colon U\to V</m> é um isomorfismo, então
+          <m>T^{-1}\colon V\to U</m> também é um isomorfismo.</p>
+	</statement>
+      </proposition></li>
     </dl>
-    <proposition xml:id="prop-tlinv">
-      <statement>
-        <p>Se <m>T\colon U\to V</m> é um isomorfismo, então
-        <m>T^{-1}\colon V\to U</m> também é um isomorfismo.</p>
-      </statement>
-    </proposition>
-
   </slide>
   
   <slide>
