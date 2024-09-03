@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="esp_transf">
+  <title>Espaço das Transformações Lineares</title>
+
+  <slide>
+    <title>Operações com Transformações Lineares</title>
+
+    <dl pause="yes">
+      <li><p>Podemos realizar operações com funções, utilizando a
+      estrutura vetorial do contradomínio.</p></li>
+      <li><definition xml:id="def-esp_transf">
+	<statement>
+          <p>Sejam <m>U</m> e <m>V</m> espaços vetorias. O conjunto de
+	  todas as transformações lineares <m>T\colon U\to V</m> será
+	  denotado por <m>L(U,V)</m>.</p>
+	  <p>Se <m>U=V</m>, escrevemos simplesmente <m>L(U)</m>.</p>
+	  <p>Em <m>L(U,V)</m> podemos definir soma e multiplicação por
+	  escalar:
+	  <md>
+	    <mrow>T+S&amp;\colon U\to V,\text{ dada por
+	    }(T+S)(u)=T(u)+S(u);</mrow>
+	    <mrow>\alpha T&amp;\colon U\to V,\text{ dada por
+	    }(\alpha T)(u)=\alpha T(u).</mrow>
+	  </md>
+	  </p>
+	  <p>Se <m>T\in L(U,V)</m> e <m>S\in L(V,W)</m>, temos a
+	  composta <m>S\circ T\colon U\to W</m>, dada por <m>(S\circ
+	  T)(u)=S\big(T(u)\big)</m>.</p>
+	</statement>
+      </definition></li>
+      <li><p><term>Observação:</term> Tanto <m>T+S</m>, quanto <m>\alpha
+      T</m> definidas acima são elementos de <m>L(U,V)</m>. Para a
+      composta temos que <m>S\circ T\in L(U,W)</m>.</p></li>
+      <li><proposition xml:id="prop-esp_transf">
+	<statement>
+          <p>O conjunto <m>L(U,V)</m>, munido das operações acima é um
+	  espaço vetorial.</p>
+	</statement>
+      </proposition></li>
+      <li><p>Qual é a dimensão de <m>L(U,V)</m> em termos das dimensões de
+      <m>U</m> e de <m>V</m>?</p></li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Matrizes de Transformações Lineares - Construção</title>
+
+    <dl pause="yes">
+      <li><p>Se <m>B=\{u_1,\ldots,u_n\}</m> e
+      <m>C=\{v_1,\ldots,v_m\}</m> são bases dos espaços <m>U</m> e
+      <m>V</m>, respectivamente podemos escrever cada vetor <m>T(u_j)\in
+      V</m> na base <m>C</m>:
+      <me>T(u_j)=\sum\limits_{i=1}^m a_{ij}v_i.</me></p></li>
+      <li><definition xml:id="def-mat_transf">
+	<statement>
+          <p>A matriz <m>(a_{ij})\in M_{m\times n}(\R)</m> é a
+          <term>matriz da transformação linear <m>T</m> com relação às
+          bases <m>B</m> e <m>C</m></term>.</p>
+	  <p>Notação: <m>[T]_{C,B}=(a_{ij})</m>.</p>
+	</statement>
+      </definition></li>
+      <li><proposition xml:id="prop-mat_transf_contas">
+	<statement>
+          <p>Com as notações acima,
+          <m>\big[T(u)\big]_C=[T]_{C,B}[u]_B</m>, onde <m>[u]_B</m> e
+          <m>\big[T(u)\big]_C</m> são, respectivamente as coordenadas de
+          <m>u</m> na base <m>B</m> e de <m>T(u)</m> na base
+          <m>C</m>.</p>
+	</statement>
+	<proof><p><m>u=\sum\limits_{j=1}^n \alpha_ju_j\implies
+	T(u)=\sum\limits_{j=1}^n\alpha_jT(u_j)=\sum\limits_{j=1}^n\alpha_j\left(\sum\limits_{i=1}^m
+	a_{ij}v_i\right)=\sum\limits_{i=1}^m\left(\sum\limits_{j=1}^n
+	a_{ij}\alpha_j\right)v_i</m>.</p></proof>
+      </proposition></li>
+    </dl>
+  </slide>
+    
+  <slide>
+    <title>Matrizes de Transformações Lineares - Exemplos e Propriedades</title>
+
+    <dl pause="yes">
+      <li><title>Exemplos:</title>
+      <p><m>[T]_{C,B}</m>, onde <m>T\in L(\R^3,\R^2)</m> é dada por
+      <m>T(x,y,z)=(x+y,y+z)</m>,
+      <m>B=\big\{(1,0,0),(0,1,0),(0,0,1)\big\}</m> e
+      <m>C=\big\{(1,0),(1,1)\big\}</m>.</p>
+      <p pause="yes">A matriz do operador derivação em <m>P_3(\R)</m>,
+      com relação à base canônica desse espaço.</p>
+      </li>
+      <li><proposition xml:id="prop-matriz_transfops">
+	<statement>
+          <p>Sejam <m>U</m> e <m>V</m> espaços vetoriais com bases
+          <m>B</m> e <m>C</m>, respectivamente e <m>T,S\in
+          L(U,V)</m>. Então
+          <me>[T+S]_{C,B}=[T]_{C,B}+[T]_{C,B}\qquad\text{e}\qquad
+          [\alpha S]_{C,B}=\alpha[S]_{C,B}.</me>
+	  </p>
+	</statement>
+      </proposition></li>
+      <li><proposition xml:id="prop-matriz_transfbij">
+	<statement>
+          <p>Sejam <m>U</m> e <m>V</m> espaços vetoriais com bases
+	  <m>B</m> e <m>C</m>, respectivamente. A aplicação que associa
+	  a cada <m>T\in L(U,V)</m> a matriz <m>[T]_{C,B}</m> é um
+	  isomorfismo linear.
+	  </p>
+	</statement>
+      </proposition>
+      <p>Consequentemente, se <m>\dim U=n</m> e <m>\dim V=m</m>, então
+      <m>\dim L(U,V)=nm</m>.</p>
+      </li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Matrizes de Transformações Lineares - Composta e Mudança de
+    Base</title>
+    
+    <dl pause="yes">
+      <li><theorem xml:id="teo-matriz_comp">
+	<statement>
+          <p>Sejam <m>U, V</m> e <m>W</m> espaços vetoriais com bases
+          <m>B,C</m> e <m>D</m>, respectivamente. Se <m>T\in L(U,V)</m> e
+	  <m>S\in L(V,W)</m>, então <me>[S\circ T]_{D,B}=[S]_{D,C}[T]_{C,B}.</me>
+	  </p>
+	</statement>
+      </theorem></li>
+      <li><p>Em particular, se <m>T\in L(U,V)</m> é um isomorfismo,
+      <m>T^{-1}\in L(V,U)</m> e então
+      <m>[T]_{C,B}[T^{-1}]_{B,C}=[\mathrm{Id}]_{C}=\mathrm{Id}</m> e
+      <m>[T^{-1}]_{B,C}[T]_{C,B}=[\mathrm{Id}]_{B}=\mathrm{Id}</m>.</p></li>
+      <li><p>Matrizes mudança de base: nada mais do que a matriz da
+      transformação identidade escrita nas bases <m>B</m> e
+      <m>C</m>.</p></li>
+      <li><title>Exemplos:</title>
+      <p pause="yes">
+	Considere <m>T\in L\big(\R^2,P_1(\R)\big)</m>, dado por
+	<m>T(x,y)=x+(x+y)t</m>. Determine sua matriz relativa às bases
+	canônicas e, com isso, explicite a expressão de
+      <m>T^{-1}</m>.</p>
+      <p pause="yes">
+	Considere <m>T\in L\big(P_3(\R),\R\big)</m>, dado por
+	<m>T\big(p(t)\big)=\displaystyle{\int_0^1 p(t)\,
+	dt}</m>. Determine sua matriz relativa às bases canônicas. Use
+	isso para calcular <m>\displaystyle{\int_0^1 t^3-2t^2+3t+4\,
+      dt}</m>.</p>
+      <p pause="yes">Decida se <m>T\in L(\R^3)</m>, dado por
+      <m>T(x,y,z)=(x-y, 2y,y+z)</m> é um invertível. Se sim, quem é sua
+      inversa?</p>
+      <p pause="yes">Determine todos os operadores lineares <m>S\in
+      L(\R^2)</m>, da forma <m>S(x,y)=(ax+by,cx)</m>, tais que
+      <m>S^2=\mathrm{Id}</m> (operador identidade). Repita para
+      <m>S^2=\nv</m> (operador nulo).</p>
+      </li>
+    </dl>
+  </slide>
+</section>
+
