@@ -47,7 +47,7 @@
       vetor <m>w\in V</m> fixado, <m>T_w(v)=v+w</m> é linear se, e
       somente se, <m>w=\nv</m>.</p></li>
       <li><p><m>T\colon\R^3\to\R^2</m> dada por
-      <m>T(x,y,z)=T(x,2x-z)</m>.</p></li>
+      <m>T(x,y,z)=(x,2x-z)</m>.</p></li>
       <li><p>Generalizando, para <m>A\in M_{m\times n}(\R)</m> fixada,
       considere <m>T\colon\R^n\to\R^m</m>, dada por
       <m>T(x)=Ax</m>.</p></li>
