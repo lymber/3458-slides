@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 
-<section xml:id="esp_transf">
+<section xml:id="transflin-eigen">
   <title>Diagonalização de Operadores</title>
 
   <slide>
