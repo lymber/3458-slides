@@ -198,7 +198,10 @@
 	 não é -->
     <!-- desigualdade entre multiplicidade? -->
     <!-- classificação das diagonalizáveis em termos das multiplicidades
-	 algébrica e geométrica --> 
+	 algébrica e geométrica -->
+    <!-- Curiosidade: Cayley-Hamilton, enunciar geral e comentar casos
+	 2x2 e 3x3, escrever A^n em termos das potências anteriores e
+	 critério do minimal -->
     
   </slide>
   
