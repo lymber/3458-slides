@@ -4,24 +4,203 @@
   <title>Diagonalização de Operadores</title>
 
   <slide>
-    <title>Autovalores e Autovetores - Motivação e Definição</title>
+    <title>Autovalores e Autovetores - Motivação e Definições</title>
 
     <dl pause="yes">
-      <li><p></p></li>
+      <li><p>Se <m>T\in L(V)</m>, pode existir <m>v\in V</m> tal que
+      <m>T(v)</m> e <m>v</m> são paralelos.</p></li>
+      <li><p>Um vetor desse tipo carrega informação importante sobre a
+      transformação <m>T</m>.</p>
+      <p>Em casos especiais conseguimos uma base de <m>V</m> formada por
+      vetores com essa propriedade. Quando e como é o que vamos abordar
+      nesta seção.</p>
+      </li>
       <li><definition xml:id="def-eigen">
 	<statement>
-          <p>
+          <p>Sejam <m>V</m> um espaço vetorial (sobre <m>\R</m> ou
+          <m>\C</m>) e <m>T\in L(V)</m>. Um vetor <m>v\neq\nv\in V</m> é
+          um <term>vetor próprio</term> de <m>T</m> se existe um escalar
+          <m>\lambda</m> (real ou complexo respectivamente) tal que
+          <m>T(v)=\lambda v</m>. O escalar <m>\lambda</m> é chamado
+          <term>valor próprio</term> de <m>T</m> associado <m>v</m>.
 	  </p>
 	</statement>
       </definition></li>
-      <li><p><term>Observação:</term> </p></li>
-      <li><proposition xml:id="prop-">
+      <li><p><term>Observação:</term> Vetores e valores próprios são
+      também chamados, respectivamente de autovetores e
+      autovalores.</p></li>
+      <li><p><term>Observação:</term> A cada vetor próprio está
+      associado um único autovalor: <m>\lambda u = T(u) = \lambda' u
+      \implies (\lambda-\lambda')u=\nv\implies
+      \lambda=\lambda'</m>.</p></li>
+      <li><proposition xml:id="prop-autoesp">
 	<statement>
-          <p></p>
+          <p>Sejam <m>T\in L(V)</m> e <m>\lambda</m> um escalar. O
+	  conjunto <m>V_\lambda=\big\{v\in V\colon T(v)=\lambda
+	  v\big\}</m> é um subespaço vetorial de <m>V</m>.</p>
+	  <p><m>V_\lambda</m> é chamado <term>subespaço próprio</term>
+	  ou <term>autoespaço</term> associado ao escalar
+	  <m>\lambda</m>.</p>
 	</statement>
       </proposition></li>
+      <li><p><term>Observação:</term> Na definição acima, se
+      <m>\lambda</m> não é valor próprio, então <m>V_\lambda=\{\nv\}</m>
+      e que <m>\nv</m> não é vetor próprio de nenhum operador
+      linear.</p></li>
+      <li><p><term>Observação:</term> <m>V_\lambda=\ker
+      (T-\lambda\mathrm{Id})</m>.</p></li>
     </dl>
   </slide>
 
+  <slide>
+    <title>Autovalores e Autovetores - Exemplos e Propriedades</title>
+
+    <p>Vamos discutir cada um dos exemplos abaixo geometricamente e
+    inferir a existência de autovetores:</p>
+    
+    <dl pause="yes">
+      <li><title>Reflexão pela bissetriz: <m>T\in L(\R^2)</m>,
+      <m>T(x,y)=(y,x).</m></title>
+      <p>Autovetores e autovalores:</p></li>
+      <li><title>Rotação no sentido anti-horário de <m>\frac{\pi}{2}</m>
+      radianos: <m>T\in L(\R^2)</m>, <m>T(1,0)=(0,1)</m> e
+      <m>T(0,1)=(-1,0)</m>.</title>
+      <p>Autovetores e autovalores:</p></li>
+      <li><title>Homotetias num espaço vetorial: <m>T(v)=\lambda v</m>,
+      para todo <m>v\in V</m>.</title>
+      <p>Autovetores e autovalores:</p></li>
+      <li><title>Rotação em <m>\R^3</m>, fixando o eixo
+      <m>Oz</m>.</title>
+      <p>Como é a matriz de tal operador na base canônica?</p>
+      <p>Autovetores e autovalores:</p>
+      </li>
+      <li><title>Projeção no plano <m>Oxy</m>: <m>T\in L(\R^3)</m>,
+      <m>T(x,y,z)=(x,y,0)</m>.</title>
+      <p>Autovetores e autovalores:</p>
+      </li>
+      <li><title>Derivação de funções: <m>T\in
+      L\big(\mathcal{C}^1(\R)\big)</m>, <m>T(f)=f'</m>.</title>
+      <p>Autovetores e autovalores:</p>
+      </li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Autovalores e Autovetores - Como calcular? (parte I)</title>
+    
+    <p>Como vimos, <m>V_\lambda=\ker (T-\lambda\mathrm{Id})</m>. Vamos usar
+    isso para determinar os autovetores de <m>T</m>.</p>
+
+    <p pause="yes">Para isso precisamos conhecer os
+    autovalores. Começãmos então com a:</p>
+
+    <dl pause="yes">
+      <li><definition xml:id="def-polcar">
+	<statement>
+          <p>Dada uma matriz <m>A\in M_n(\R)</m> ou <m>A\in M_n(\R)</m>,
+          chamamos de <term>polinômio característico</term> de <m>A</m>,
+          o polinômio de grau <m>n</m> dado por
+          <m>p_A(t)=\det(A-t\mathrm{Id}_n)</m>.
+	  </p>
+	</statement>
+      </definition></li>
+      <li><p><term>Exemplo:</term>
+      <m>A=\begin{pmatrix}0&amp;1\\1&amp;0\end{pmatrix}</m>.</p></li>
+      <li><proposition xml:id="prop-polcar1">
+	<statement>
+          <p>Matrizes semelhantes têm o mesmo polinômio característico.</p>
+	</statement>
+      </proposition></li>
+      <li><p>Isso nos permite considerar polinômios característicos de
+      operdores lineares:</p></li>
+      <li><definition xml:id="def-polcar2">
+	<statement>
+          <p>Sejam <m>V</m> um espaço vetorial de dimensão finita e
+          <m>T\in L(V)</m>. O <term>polinômio característico de
+          <m>T</m></term> é o polinômio da matriz de <m>T</m> em relação
+          a qualquer base de <m>V</m>.</p>
+	  <p>Notação: <m>p_T(t)</m>.</p>
+	</statement>
+      </definition></li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Autovalores e Autovetores - Como calcular? (parte II)</title>
+
+    <p></p>
+    
+    <dl pause="yes">
+      <li><proposition xml:id="prop-polcar2">
+	<statement>
+          <p>Se <m>\dim V&lt;\infty</m> e <m>T\in L(V)</m>, então os
+          autovalores de <m>T</m> são exatamente as raízes de
+          <m>p_T(t)</m>.</p>
+	</statement>
+      </proposition></li>
+      <li><title>Exemplos:</title>
+      <p><m>T\in L(\R^2)</m>, <m>T(x,y)=(y,x)</m>.</p>
+      <p pause="yes"><m>T\in L(\R^2)</m>, <m>T(1,0)=(0,1)</m> e
+      <m>T(0,1)=(-1,0)</m>.</p>
+      <p pause="yes"><m>T\in L(V)</m>, <m>T(v)=\lambda v</m>.</p>
+      <p pause="yes"><m>T\in L(\R^3)</m>,
+      <m>[T]=\begin{pmatrix}
+      \cos\theta&amp;-\sin\theta&amp;0\\
+      \sin\theta&amp;\cos\theta&amp;0\\
+      0&amp;0&amp;1
+      \end{pmatrix}</m>.</p>
+      <p pause="yes"><m>T\in L(\R^3</m>, <m>T(x,y,z)=(x,y,0)</m>.</p>
+      </li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Diagonalização - Motivação e Definições</title>
+
+    <p><term>Objetivo:</term> Dados <m>V</m>, espaço vetorial de
+    dimensão finita, e <m>T\in L(V)</m>, encontrar, se possível, uma
+    base <m>B</m> de <m>V</m> na qual <m>[T]_B</m> é a mais simples
+    possível.</p>
+
+    <p pause="yes">Consideremos os operadores <m>T,S\in L(\R^2)</m>
+    dados por <m>T(x,y)=(y,x)</m> e <m>S(x,y)=(x+y,y)</m>.</p>
+    
+    <p pause="yes">Determine os autovalores e autovetores desses
+    operadores.</p>
+
+    <p pause="yes">Em qual dos casos <m>\R^2</m> admite uma base
+    composta por autovetores do operador? Como fica a matriz dele nessa
+    base?</p>
+
+    <dl pause="yes">
+      <li><definition xml:id="def-diag">
+	<statement>
+          <p>Seja <m>V</m> um espaço vetorial de dimensão finita. Um
+	  operador <m>T\in L(V)</m> é dito <term>diagonalizável</term>
+	  se existe uma base <m>B</m> de <m>V</m> na qual <m>[T]_B</m> é
+	  uma matriz diagonal.</p>
+	</statement>
+      </definition></li>
+      <li><p>Nessa situação teremos
+      <m>p_T(t)=(\lambda_1-x)\ldots(\lambda_n-x)</m>.</p></li>
+      <li><p><term>Atenção!</term> Na fatoração acima os
+      <m>\lambda_i</m>não precisam ser distintos, mesmo que <m>T</m>
+      seja diagnonalizável.</p></li>
+      <li><p><term>Lembrando e generalizando:</term> sabemos o que
+      significam soma e soma direta de dois subespaços. Generalizamos
+      isso para qualquer quantidade finita de subespaços de maneira
+      natural: <m>U_1\oplus U_2\oplus\ldots\oplus U_k</m>.</p></li>
+    </dl>
+
+    <!-- Mostrar que interseção de autoespaços é só o vetor nulo -->
+    <!-- Definir multiplicidade algébrica e geométrica -->
+    <!-- Exemplo com autovalor repetido que é diagonlizável e outro que
+	 não é -->
+    <!-- desigualdade entre multiplicidade? -->
+    <!-- classificação das diagonalizáveis em termos das multiplicidades
+	 algébrica e geométrica --> 
+    
+  </slide>
+  
 </section>
 
