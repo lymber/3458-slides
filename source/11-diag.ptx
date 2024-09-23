@@ -184,7 +184,7 @@
       <li><p>Nessa situação teremos
       <m>p_T(t)=(\lambda_1-x)\ldots(\lambda_n-x)</m>.</p></li>
       <li><p><term>Atenção!</term> Na fatoração acima os
-      <m>\lambda_i</m>não precisam ser distintos, mesmo que <m>T</m>
+      <m>\lambda_i</m> não precisam ser distintos, mesmo que <m>T</m>
       seja diagnonalizável.</p></li>
       <li><p><term>Lembrando e generalizando:</term> sabemos o que
       significam soma e soma direta de dois subespaços. Generalizamos
@@ -193,6 +193,8 @@
     </dl>
 
     <!-- Mostrar que interseção de autoespaços é só o vetor nulo -->
+    <!-- Mostrar que T é diagonlizável se e só se V é soma direta dos
+	 autoespaços -->
     <!-- Definir multiplicidade algébrica e geométrica -->
     <!-- Exemplo com autovalor repetido que é diagonlizável e outro que
 	 não é -->
