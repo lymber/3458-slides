@@ -128,16 +128,15 @@
   <slide>
     <title>Autovalores e Autovetores - Como calcular? (parte II)</title>
 
-    <p></p>
-    
+    <proposition xml:id="prop-polcar2">
+      <statement>
+        <p>Se <m>\dim V&lt;\infty</m> e <m>T\in L(V)</m>, então os
+        autovalores de <m>T</m> são exatamente as raízes de
+        <m>p_T(t)</m>.</p>
+      </statement>
+    </proposition>
+ 
     <dl pause="yes">
-      <li><proposition xml:id="prop-polcar2">
-	<statement>
-          <p>Se <m>\dim V&lt;\infty</m> e <m>T\in L(V)</m>, então os
-          autovalores de <m>T</m> são exatamente as raízes de
-          <m>p_T(t)</m>.</p>
-	</statement>
-      </proposition></li>
       <li><title>Exemplos:</title>
       <p><m>T\in L(\R^2)</m>, <m>T(x,y)=(y,x)</m>.</p>
       <p pause="yes"><m>T\in L(\R^2)</m>, <m>T(1,0)=(0,1)</m> e
@@ -151,6 +150,15 @@
       \end{pmatrix}</m>.</p>
       <p pause="yes"><m>T\in L(\R^3</m>, <m>T(x,y,z)=(x,y,0)</m>.</p>
       </li>
+      <li><title>Observação:</title>
+      <p>Se <m>V</m> é um espaço vetorial sobre <m>\C</m> de dimensão
+      <m>n</m>, então <m>p_T(t)</m> é, em geral, um polinômio com
+      coeficientes complexos e portanto sempre terá <m>n</m> raízes
+      complexas (contando multiplicidades). Consequentemente sempre
+      terá autovalores e autovetores.</p> <p>O segundo exemplo acima
+      mostra que esse não é o caso em geral quando o espaço vetorial é
+      sobre os reais. Porém, se <m>\dim_\R V</m> é ímpar, garantimos a
+      existência de pelo menos um autovalor.</p></li>
     </dl>
   </slide>
 
@@ -189,23 +197,106 @@
       <li><p><term>Lembrando e generalizando:</term> sabemos o que
       significam soma e soma direta de dois subespaços. Generalizamos
       isso para qualquer quantidade finita de subespaços de maneira
-      natural: <m>U_1\oplus U_2\oplus\ldots\oplus U_k</m>.</p></li>
+      natural: <m>U_1\oplus U_2\oplus\ldots\oplus U_k</m> é o conjunto
+      de todas as somasentre elementos de cada <m>U_i</m> e que
+      <m>\bigcap\limits_{i=1}^j U_i=\{\nv\}</m> para todo <m>2\leq
+      j\leq k</m>.</p> <p>Continua valendo então a união das bases de
+      cada <m>U_i</m> é uma base dessa soma direta. Em particular
+      <me>\dim\Big(\bigoplus\limits_{i=1}^k
+      U_i\Big)=\sum\limits_{i=1}^k\dim U_i.</me></p></li>
     </dl>
+  </slide>
 
-    <!-- Mostrar que interseção de autoespaços é só o vetor nulo -->
-    <!-- Mostrar que T é diagonlizável se e só se V é soma direta dos
-	 autoespaços -->
-    <!-- Definir multiplicidade algébrica e geométrica -->
-    <!-- Exemplo com autovalor repetido que é diagonlizável e outro que
-	 não é -->
-    <!-- desigualdade entre multiplicidade? -->
+  <slide>
+    <title>Diagonalização - Primeiras Propriedades e Exemplos</title>
+
+    <proposition xml:id="prop-autesp">
+      <statement>
+        <p>Sejam <m>V</m> um espaco vetorial sobre <m>K</m>
+        (<m>K=\R</m> ou <m>K=\C</m>) e <m>T\in L(V)</m>. Se
+        <m>\lambda,\mu\in K</m> são autovalores distintos de <m>T</m>,
+        então <m>V_\lambda\cap V_\mu=\{\nv\}</m>.</p>
+      </statement>
+    </proposition>
+
+    <dl pause="yes">
+      <li><p>Fica fácil ver que se, <m>T\in L(V)</m> é diagonalizável
+      se e somente se <m>V=V_{\lambda_1}\oplus
+      V_{\lambda_2}\oplus\ldots\oplus V_{\lambda_k}</m>, onde os
+      <m>\lambda_i</m> são os autovalores de <m>T</m>.</p></li>
+
+      <li><p>Isso acontece trivialmente se <m>k=\dim V</m>, ou seja se
+      todas as raízes de <m>p_T(t)</m> são distintas, mas pode ocorrer
+      em outros casos:</p></li>
+
+      <li><title>Exemplos:</title>
+      <p><m>T\in L(\R^3)</m>, <m>T(x,y,z)=(2x+z,2y,3z)</m>.</p>
+      <p><m>T\in L(\R^3)</m>, <m>T(x,y,z)=(2x+y,3y+z,3z)</m>.</p>
+      </li>
+      <li><definition xml:id="def-multag">
+	<statement>
+          <p>Sejam <m>V</m> um espaço vetorial de dimensão finita,
+          <m>T\in L(V)</m> e <m>\lambda\in K</m> (<m>\R</m> ou
+          <m>\C</m>) um auto valor de <m>T</m>.</p>
+	  <p>A <term>multiplicidade geométrica de
+	  <m>\lambda</m></term> é <m>m_g(\lambda)=\dim_K
+	  V_\lambda</m>.</p>
+	  <p>A <term>multiplicidade algébrica de <m>\lambda</m></term>
+	  é a multiplicidade de <m>\lambda</m> como raiz de
+	  <m>p_T(t)</m> e é denotada por <m>m_a(\lambda)</m>.</p>
+	</statement>
+      </definition></li>
+      <li><p><term>Observação:</term> É possível mostrar que
+      <m>m_a(\lambda)\geq m_g(\lambda)</m>.</p></li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Diagonalização - Resultado principal</title>
+
+    <theorem xml:id="teo-diag">
+      <statement>
+        <p>Sejam <m>V</m> um espaco vetorial de dimensão finita sobre <m>K</m>
+        (<m>K=\R</m> ou <m>K=\C</m>) e <m>T\in L(V)</m>. Então <m>T</m> é diagonalizável sobre <m>K</m> se e somente se valem simultaneamente:
+	<ol marker="i">
+	  <li><m>p_T(t)</m> tem todas as sua raízes no corpo <m>K</m>;</li>
+	  <li><m>m_a(\lambda)=m_g(\lambda)</m> para todo <m>\lambda\in
+	  K</m> autovalor de <m>T</m>.</li>
+	</ol></p>
+      </statement>
+    </theorem>
+
+    <dl pause="yes">
+      <li><title>Exemplos:</title>
+      <p pause="yes"><m>T\in L(\R^2)</m>, <m>T(x,y)=(4x+4y,x+4y)</m>.</p>
+       <p pause="yes"><m>T\in L(\R^3)</m>, tem <m>A=\begin{pmatrix}
+      0&amp;7&amp;-6\\
+      -1&amp;4&amp;0\\
+      0&amp;2&amp;-2\\
+      \end{pmatrix}</m> como matriz em relação à base canônica.</p>
+      <p pause="yes"><m>T\in L(\C^4)</m>, tem <m>A=\begin{pmatrix}
+      2&amp;1&amp;0&amp;0\\
+      0&amp;2&amp;0&amp;0\\
+      0&amp;0&amp;1&amp;1\\
+      0&amp;0&amp;4&amp;-2
+      \end{pmatrix}</m> como matriz em relação à base canônica.</p>
+      </li>
+      <li><title>Curiosidades:</title>
+      <p pause="yes">Teorema de Cayley-Hamilton;</p>
+      <p pause="yes">Aplicação: se <m>A\in M_n(\R)</m> então
+      <m>A^n</m> escreve-se como combinação linear das potências
+      anteriores de <m>A</m>;</p>
+      <p pause="yes">Casos: <m>2\times 2</m> e <m>3\times 3</m>;</p>
+      <p pause="yes">Polinômio minimal e critério algébrico para diagonalização.</p>
+      </li>
+    </dl>
+    </slide>
+  
+</section>
+
+
     <!-- classificação das diagonalizáveis em termos das multiplicidades
 	 algébrica e geométrica -->
     <!-- Curiosidade: Cayley-Hamilton, enunciar geral e comentar casos
 	 2x2 e 3x3, escrever A^n em termos das potências anteriores e
 	 critério do minimal -->
-    
-  </slide>
-  
-</section>
-
