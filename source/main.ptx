@@ -70,7 +70,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
     <xi:include href="./09-transf_lin.ptx" />
     <xi:include href="./10-esp_transf.ptx" />
     <xi:include href="./11-diag.ptx" />
-    <xi:include href="./98-prod_int.ptx" />
+    <xi:include href="./12-prod_int.ptx" />
     <!-- <xi:include href="./99-sample_stuff.ptx" /> -->
 
   </slideshow>
