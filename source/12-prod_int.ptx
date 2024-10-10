@@ -31,6 +31,10 @@
 	      u,u\rangle=0\iff u=\nv</m>.</li>
 	      </ol>
 	    </p>
+	    <p>Quando <m>V</m> tem um produto interno dizermos que
+	    <m>\big(V,\langle,\rangle\big)</m> é um <term>espaço
+	    vetorial com produto interno</term> ou simplesmente um
+	    <term>espaço euclidiano</term>.</p>
 	  </statement>
       </definition></p></li>
     </dl>
@@ -46,7 +50,7 @@
 	<li><m>(\alpha+\beta)\langle u,v\rangle=\langle
 	\alpha u,v\rangle+\langle \beta u,v\rangle</m></li>
  	<li><m>\langle u, \alpha
-      v_1+v_2,v\rangle=\alpha \langle u, v_1\rangle +\langle
+      v_1+v_2\rangle=\alpha \langle u, v_1\rangle +\langle
 	u,v_2\rangle</m>;</li>
       </ul></p></li>
       <li><title>Nomenclatura</title>
@@ -86,90 +90,134 @@
       </li>
     </dl>
   </slide>
+
+  <slide>
+    <title> Produto Interno - Geometria de um espaço vetorial</title>
+    <dl pause="yes">
+      <li><definition xml:id="def-norma">
+	<statement>
+	  <p>Seja <m>\big(V,\langle,\rangle\big)</m> um espaço vetorial com
+	  produto interno. A <term>norma de <m>v\in V</m></term> é o número
+	  real positivo <m>\|v\|=\sqrt{\langle v,v\rangle}</m>.</p>
+	</statement>
+      </definition></li>
+      <li><p>Isso dá uma maneira de medir comprimentos num espaço
+      vetorial abstrato. Temos uma régua!</p></li>
+      <li><proposition xml:id="prop-norma">
+	<statement>
+	  <p>Seja <m>\big(V,\langle,\rangle\big)</m> um espaço vetorial com
+	  produto interno. Valem as seguintes propriedades:
+	  <ul>
+	    <li><p><m>\|\alpha v\|=|\alpha|\|v\|</m>;</p></li>
+	    <li><p><m>\|v\|=0\iff v=\nv</m>.</p></li>
+	  </ul></p>
+	</statement>
+      </proposition></li>
+      <li><proposition xml:id="prop-cs">
+	<title>(Desigualdade de Cauchy-Schwarz e Desigualdade Triangular)</title>
+	<statement>
+	  <p>Seja <m>\big(V,\langle,\rangle\big)</m> um espaço
+	  vetorial com produto interno. Então <m>\big|\langle
+	  u,v\rangle\big|\leq \|u\|\,\|v\|</m> e
+	  <m>\|u+v\|\leq\|u\|+\|v\|</m>.</p>
+	</statement>
+      </proposition></li>
+      <li><p>Usando a primeira desigualdade acima para vetores não
+      nulos, podemos escrever <m>-1\leq \dfrac{\langle
+      u,v\rangle}{\|u\|\,\|v\|} \leq 1</m>, logo existe
+      <m>\theta\in [0,\pi]</m> tal que
+      <m>\cos\theta=\dfrac{\langle
+      u,v\rangle}{\|u\|\,\|v\|}</m>.</p></li>
+      <li><p>O número real <m>\theta</m> é o <term>ângulo entre os
+      vetores <m>u</m> e <m>v</m></term>. Temos um gonômetro num espaço
+      vetorial abstato!</p></li>
+    </dl>
+  </slide>
+
   
-  <!-- <slide> -->
-  <!--   <title>Matrizes - Posto</title> -->
+  <slide>
+    <title>Produto Interno - Ortogonalidade</title>
 
-  <!--   <dl pause="yes"> -->
-  <!--     <li><definition xml:id="def-posto"> -->
-  <!-- 	<statement> -->
-  <!--         <p>Seja <m>A\in M_{m\times n}(\R)</m>. Definimos o -->
-  <!--         <term>posto-linha de <m>A</m></term> como <m>\dim\lin -->
-  <!--         A</m>.</p> -->
-  <!-- 	  <p>Analogamente, o <term>posto-coluna de -->
-  <!--         <m>A</m></term> é <m>\dim\col A</m>.</p> -->
-  <!-- 	</statement> -->
-  <!--     </definition></li> -->
-  <!--     <li><title>Exemplo:</title> -->
-  <!--     <p>Determine o posto-linha e o posto coluna de -->
-  <!--     <m>A=\begin{pmatrix} -->
-  <!--     1&amp;-2&amp;0&amp;3&amp;-4\\ 3&amp;2&amp;8&amp;1&amp;4\\ -->
-  <!--     2&amp;3&amp;7&amp;2&amp;3\\ -1&amp;2&amp;0&amp;4&amp;-3 -->
-  <!--     \end{pmatrix}</m>.</p></li> -->
-  <!--     <li><theorem xml:id="teo-posto"> -->
-  <!-- 	<statement> -->
-  <!--         <p>Seja <m>A\in M_{m\times n}(\R)</m>. Então o posto-linha e -->
-  <!-- 	  o posto-coluna de <m>A</m> são iguais.</p> -->
-  <!-- 	  <p>Notação: <m>\posto A</m>.</p> -->
-  <!-- 	</statement> -->
-  <!--     </theorem></li> -->
-  <!--   </dl> -->
-  <!-- </slide> -->
+    <dl pause="yes">
+      <li><p>Em vista do conceito de ângulo que acabamos de ver, é natural a:</p></li>
+      <li><definition xml:id="def-ort">
+	<statement>
+          <p>Seja <m>V</m> um espaço vetorial euclidiano. Dizemos que
+          <m>u,v\in V</m> são <term> ortogonais</term> se <m>\langle
+          u,v\rangle =0</m>.</p>
+	  <p>Um subconjunto <m>S=\{v_1,\ldots,v_k\}\subset V</m> é
+	  <term>ortonormal</term> se <m>\langle
+	  v_i,v_j\rangle=\delta_{ij}</m>, onde <m>\delta_{ij}=1</m>,
+	  se <m>i=j</m> e <m>\delta_{ij}=0</m>, se <m>i\neq j</m>.</p>
+	</statement>
+      </definition></li>
+      <li><title>Exemplo:</title>
+      <p>A base cannica de <m>\R^n</m> é ortonomal <term>em relação ao
+      produto interno usual desse espaço!</term></p></li>
+      <li><proposition xml:id="prop-ortli">
+	<statement>
+          <p>Se <m>S=\{v_1,\ldots,v_k\}</m> é ortonormal, então <m>S</m> é L.I.</p>
+	</statement>
+      </proposition></li>
+      <li><proposition xml:id="prop-ortvec">
+	<statement>
+          <p>Se <m>S=\{v_1,\ldots,v_k\}</m> é ortonormal, então o
+          vetor <m>v-\langle v,v_1\rangle v_1-\ldots-\langle
+          v,v_k\rangle v_k</m> é ortogonal a todos os vetores em
+          <m>[S]</m>.</p>
+	</statement>
+      </proposition></li>
+    </dl>
+  </slide>
   
-  <!-- <slide> -->
-  <!--   <title>Matrizes - Nulidade</title> -->
+  <slide>
+    <title>Produto Interno - Bases ortonormais</title>
 
-  <!--   <dl pause="yes"> -->
-  <!--     <li><definition xml:id="def-kernalmat"> -->
-  <!-- 	<statement> -->
-  <!--         <p>Seja <m>A\in M_{m\times n}(\R)</m>. O <term>núcleo de -->
-  <!--         <m>A</m></term> é o subespaço <m>\ker A=\{x\in\R^n\colon -->
-  <!--         Ax=\nv\}</m>.</p> -->
-  <!-- 	  <p>A <term>nulidade de <m>A</m></term> é <m>\dim\ker -->
-  <!-- 	  A</m>.</p> -->
-  <!-- 	  <p>Notação: <m>\nul A</m>.</p> -->
-  <!-- 	</statement> -->
-  <!--     </definition></li> -->
-  <!--     <li><title>Exemplo:</title> -->
-  <!--     <p>Determine o núcleo e a nulidade de  -->
-  <!--     <m>A=\begin{pmatrix} -->
-  <!--     1&amp;-2&amp;0&amp;3&amp;-4\\ 3&amp;2&amp;8&amp;1&amp;4\\ -->
-  <!--     2&amp;3&amp;7&amp;2&amp;3\\ -1&amp;2&amp;0&amp;4&amp;-3 -->
-  <!--     \end{pmatrix}</m>.</p></li> -->
-  <!--     <li><theorem xml:id="teo-nucimmat"> -->
-  <!-- 	<statement> -->
-  <!--         <p>Seja <m>A\in M_{m\times n}(\R)</m>. Então <m>\posto A+\nul -->
-  <!-- 	  A=n</m>.</p> -->
-  <!-- 	</statement> -->
-  <!--     </theorem></li> -->
-  <!--   </dl> -->
-  <!-- </slide> -->
+    <dl pause="yes">
+      <li><definition xml:id="def-baseort">
+	<statement>
+          <p>Se <m>B=\{v_1,\ldots,v_n\}</m> é simultaneamente um base
+          e um conjunto ortonormal no espaço vetorial euclidiano
+          <m>V</m>, dizemos que <m>B</m> é uma <term>base
+          ortonormal</term> de <m>V</m>.</p>
+	</statement>
+      </definition></li>
+      <li><theorem xml:id="teo-gramschmidt">
+	<title>(Processo de Ortonomalização de Gram-Schmidt)</title>
+	<statement>
+          <p>Se <m>V</m> é um espaço vetorial euclidiano, de dimensão
+          finita <m>\dim V=n&gt; 0</m>, então <m>V</m> admite uma base
+          ortonormal.</p>
+	</statement>
+      </theorem></li>
+      <li><title>Exemplos:</title>
+      <p>Construa uma base ortonormal para <m>\R^3</m>, com o produto
+      interno usual, a partir da base
+      <m>B=\big\{(1,0,0),(0,1,1),(0,1,2)\big\}</m>.</p> <p
+      pause="yes">Idem para a base <m>B=\{1,t,t^2\}</m> de
+      <m>P_2(\R)</m>, com o produto interno <m>\big\langle
+      p(t),q(t)\big\rangle=\displaystyle{\int_0^1 p(t)q(t)\, dt}</m>.</p></li>
+    </dl>
+  </slide>
 
-  <!-- <slide> -->
-  <!--   <title>Consequências</title> -->
+  <slide>
+    <title>Produto Interno - Complementos Ortogonais e Projeções</title>
 
-  <!--   <dl pause="yes"> -->
-  <!--     <li> -->
-  <!-- 	<p><corollary xml:id="cor-nucimmat"> -->
-  <!-- 	  <statement> -->
-  <!--           <p>Seja <m>A\in M_{m\times n}(\R)</m>.</p> -->
-  <!-- 	    <ul pause="yes"> -->
-  <!-- 	      <li>Se <m>m=n</m>, então <m>\posto A=n\iff \det(A)\neq -->
-  <!-- 	      0</m>.</li> -->
-  <!-- 	      <li>Se <m>m=n</m>, então <m>\posto A=n</m> se e somente -->
-  <!-- 	      se <m>A</m> é equivalente à <m>I_n</m> (matriz identidade).</li> -->
-  <!-- 	      <li>Se <m>m=n</m>, então <m>Ax=\nv</m> tem solução não -->
-  <!-- 	      trivial se e somente se <m>\posto A &lt; n</m>.</li> -->
-  <!-- 	      <li>Se <m>m=n</m>, então <m>Ax=b</m> tem solução única -->
-  <!-- 	      para qualquer <m>b\in\R^n</m> se e somente se <m>\posto A -->
-  <!-- 	      &lt; n</m>.</li> -->
-  <!-- 	      <li>Dado <m>b\in\R^n</m>, o sistema <m>Ax=b</m> tem alguma -->
-  <!-- 	      solução se e somente se <m>\posto A=\posto\big[A|b\big]</m>.</li> -->
-  <!-- 	    </ul> -->
-  <!-- 	  </statement> -->
-  <!-- 	</corollary></p> -->
-  <!--     </li> -->
-  <!--   </dl> -->
-  <!-- </slide> -->
+    <dl pause="yes">
+      <li>
+	<p>Somewhere in time...</p>
+      </li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Produto Interno - Isometrias</title>
+
+    <dl pause="yes">
+      <li>
+	<p>Somewhere in time...</p>
+      </li>
+    </dl>
+  </slide>
 </section>
 
