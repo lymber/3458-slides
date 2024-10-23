@@ -182,6 +182,10 @@
           ortonormal</term> de <m>V</m>.</p>
 	</statement>
       </definition></li>
+      <li><p><term>Observação:</term> Bases ortonormais são úteis,
+      pois se <m>u=(\alpha_1,\ldots,\alpha_n)_B</m> e
+      <m>v=(\beta_1,\ldots,\beta_n)_B</m>, então <m>\langle
+      u,v\rangle=\sum\limits_{i=1}^n \alpha_i\beta_i</m>.</p></li>
       <li><theorem xml:id="teo-gramschmidt">
 	<title>(Processo de Ortonomalização de Gram-Schmidt)</title>
 	<statement>
@@ -205,7 +209,47 @@
 
     <dl pause="yes">
       <li>
-	<p>Somewhere in time...</p>
+	<definition xml:id="def-comportog">
+	  <statement>
+	    <p>Sejam <m>V</m> um espaço vetorial com produto interno e
+	    <m>S\subseteq V</m> um subconjunto não-vazio
+	    qualquer. Definimos o <term>complemento ortogonal de
+	    <m>S</m></term> por <me>S^\perp=\big\{ v\in V\colon
+	    \langle v,s\rangle=0,\text{ para todo }s\in S\big\}</me></p>
+	  </statement>
+	</definition>
+      </li>
+      <li><title>Exemplos:</title>
+      <p pause="yes"><m>\big\{\nv\}^\perp = V</m>;</p>
+      <p pause="yes"><m>V^\perp = \big\{\nv\big\}</m>;</p>
+      <p pause="yes"><m>A\in M_{m\times n}(\R)\implies\ker A=(\lin A)^\perp</m>.</p>
+      </li>
+      <li><p>
+	<proposition xml:id="prop-comportg">
+	  <statement>
+	    <p>Nas condições acima <m>S^\perp</m> é um subespaço
+	    vetorial de <m>V</m>.</p>
+	    <p>Além disso, se <m>U</m> é um subespaço de <m>V</m>,
+	    então <m>V=U\oplus U^\perp</m> (e portanto, <m>\dim V=\dim
+	    U+\dim U^\perp</m>).</p>
+	  </statement>
+	</proposition></p>
+      </li>
+      <li><title>Aplicação:</title>
+      <p>Se <m>U\leq \big(V,\langle,\rangle\big)</m>, podemos escrever
+      todo <m>v\in V</m> na forma <m>v=u+w</m>, onde <m>u\in U</m> e
+      <m>w\in U^\perp</m>.</p>
+      <p pause="yes">Considere a aplicação <m>E\colon V\to V</m>, dada
+      por <m>E(v)=u</m>, chamada <term>operador de projeção ortogonal sobre
+      <m>U</m></term>. Antes de vermos umas aplicações, mostremos que:
+      <ol marker="i." pause="yes" cols="4">
+	<li><m>E\in L(V)</m>;</li>
+	<li><m>E^2=E</m>;</li>
+	<li><m>\ker E=?</m>;</li>
+	<li><m>\im E=?</m>;</li>
+      </ol></p>
+      <p pause="yes">Melhor aproximação: mínimos quadrados e
+      generalizações, vamos para a lousa fazer contas!</p>
       </li>
     </dl>
   </slide>
@@ -213,9 +257,44 @@
   <slide>
     <title>Produto Interno - Isometrias</title>
 
+    <p>Como o nome diz, são aplicações que preservam distâncias (e
+    algo mais...). Restringindo-nos somente a espaços de dimensão
+    finita (algumas coisas continuariam valendo), temos a:</p>
+    
     <dl pause="yes">
-      <li>
-	<p>Somewhere in time...</p>
+      <li><definition xml:id="def-isometria">
+	<statement>
+	  <p>Seja <m>V</m> um espaço vetorial com produto interno. Uma
+	  aplicação <m>T\in L(V)</m> é uma <term>isometria</term> se
+	  <me>\|T(v)\|=\|v\|,\text{ para todo }v\in
+	  V</me>. </p></statement></definition>
+      </li>
+      <li><p><term>Exemplo:</term> Rotações em torno da origem no
+      plano e em torno de um eixo no <m>\R^3</m>.</p></li>
+      <li><proposition xml:id="prop-isometria1">
+	<statement>
+	  <p>Toda isometria <m>T\in L(V)</m> é um isomorfismo.</p>
+	</statement></proposition>
+      </li>
+      <li><proposition xml:id="prop-isometria2">
+	<statement>
+	  <p>Sejam <m>V</m> um espaço vetorial euclidiano e <m>T\in
+	  L(V)</m>. São equivalentes:
+	  <ol marker="i.">
+	    <li><m>T</m> é uma isometria;</li>
+	    <li><m>T</m> leva base ortonormal em base ortonormal;</li>
+	    <li><m>\big\langle T(u),T(v)\big\rangle=\langle
+	    u,v\rangle</m>, para todos <m>u,v\in V</m>.</li>
+	  </ol></p>
+	</statement></proposition>
+      </li>
+      <li><proposition xml:id="prop-isometria3">
+	<statement>
+	  <p>Seja <m>V</m> um espaço vetorial euclidiano e <m>B</m>
+	  uma base ortonormal de <m>V</m>. Então <m>T\in L(V)</m> é
+	  uma isometria se e somente se <m>[T]_B</m> é uma matriz
+	  ortogonal, ou seja, <m>[T]_B^{-1}=[T]_B^t</m>.</p>
+	</statement></proposition>
       </li>
     </dl>
   </slide>
