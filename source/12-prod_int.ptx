@@ -152,7 +152,7 @@
 	</statement>
       </definition></li>
       <li><title>Exemplo:</title>
-      <p>A base cannica de <m>\R^n</m> é ortonomal <term>em relação ao
+      <p>A base canônica de <m>\R^n</m> é ortonomal <term>em relação ao
       produto interno usual desse espaço!</term></p></li>
       <li><proposition xml:id="prop-ortli">
 	<statement>
