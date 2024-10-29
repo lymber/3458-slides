@@ -121,7 +121,7 @@
 	  formada por autovetores de <m>T</m>.</p>
       </statement></theorem></li>
       <li><p><term>Corolário:</term> Toda matriz simétrica com
-      entradas reais é iagonalizável.</p></li>
+      entradas reais é diagonalizável.</p></li>
       <li><p><term>Exemplo:</term> <m>A=
       \begin{bmatrix}
       1&amp; -2&amp; 0\\
