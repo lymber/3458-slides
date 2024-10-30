@@ -45,7 +45,7 @@
       definidos num espaço vetorial <m>V</m> é um subespaço vetorial
       de <m>L(V)</m>. Além disso, se <m>\dim V=n</m>, então este
       subespaço tem dimensão
-      <m>\dfrac{n(n-1)}{2}</m>.</p></statement></proposition></li>
+      <m>\dfrac{n(n+1)}{2}</m>.</p></statement></proposition></li>
       <li><p><term>Cuidado!</term> Dada uma base qualquer de <m>V</m>,
       nem toda matriz simétrica representa um operador autoadjunto
       nessa base.</p> <p>Concretamente, tome
@@ -82,7 +82,7 @@
 	    <li><m>\langle v_1,v_2\rangle=\overline{\langle
 	    v_2,v_1\rangle}</m>;</li>
 	    <li><m>\langle v,v\rangle</m> é um número real positivo para
-	    todo <m>v\in V</m>.</li>
+	    todo <m>v\in V</m>, <m>v\neq\nv</m>.</li>
 	  </ol>
 	  </p>
 	  <p>Um espaço vetorial munido de um produto interno
